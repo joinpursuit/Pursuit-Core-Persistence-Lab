@@ -10,14 +10,42 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Favorites View Controller-->
         <scene sceneID="d1W-LK-X5E">
             <objects>
-                <viewController id="gFO-8U-p97" sceneMemberID="viewController">
+                <viewController id="gFO-8U-p97" customClass="FavoritesViewController" customModule="Persistence_Lab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jXU-I3-flb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8QF-z0-odb">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="p9B-f3-3VP">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="wYu-Mn-jdM">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ptp-tH-HfZ" firstAttribute="trailing" secondItem="8QF-z0-odb" secondAttribute="trailing" id="BQ1-eF-Ihh"/>
+                            <constraint firstItem="ptp-tH-HfZ" firstAttribute="bottom" secondItem="8QF-z0-odb" secondAttribute="bottom" id="WTe-r7-FYY"/>
+                            <constraint firstItem="8QF-z0-odb" firstAttribute="leading" secondItem="ptp-tH-HfZ" secondAttribute="leading" id="hQe-3S-5SX"/>
+                            <constraint firstItem="8QF-z0-odb" firstAttribute="top" secondItem="ptp-tH-HfZ" secondAttribute="top" id="tdB-FR-Adc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="ptp-tH-HfZ"/>
                     </view>
                     <navigationItem key="navigationItem" id="pMo-7u-y28"/>
@@ -26,10 +54,25 @@
             </objects>
             <point key="canvasLocation" x="789.85507246376812" y="168.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Favorites Detail View Controller-->
+        <scene sceneID="MAa-2L-LRJ">
+            <objects>
+                <viewController storyboardIdentifier="FavoritesDetailViewController" id="3S3-52-rsE" customClass="FavoritesDetailViewController" customModule="Persistence_Lab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Nu-A0-IZ4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="6WP-Sk-4B5"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZIy-eH-7AC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1906" y="179"/>
+        </scene>
+        <!--Photo View Controller-->
         <scene sceneID="cnc-Nv-6to">
             <objects>
-                <viewController id="q4h-gM-QMa" sceneMemberID="viewController">
+                <viewController id="q4h-gM-QMa" customClass="PhotoViewController" customModule="Persistence_Lab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2OV-V6-n4p">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -76,6 +119,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aMx-nC-AKf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="789.85507246376812" y="-479.46428571428567"/>
+        </scene>
+        <!--Photo Detail View Controller-->
+        <scene sceneID="DGJ-Pa-a9S">
+            <objects>
+                <viewController storyboardIdentifier="PhotoDetailViewController" id="VyU-kb-Pg8" customClass="PhotoDetailViewController" customModule="Persistence_Lab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I8q-o9-09P">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Rc8-v4-TSL"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FWp-sU-6Z4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1888" y="-488"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="N96-JJ-Owh">
