@@ -25,6 +25,8 @@
 		3AB168EB2342948E00D268B9 /* PhotoAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB168EA2342948E00D268B9 /* PhotoAPIClient.swift */; };
 		3AB168ED2342A48D00D268B9 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB168EC2342A48D00D268B9 /* Secrets.swift */; };
 		3AB168EF2342A78100D268B9 /* PhotoSearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB168EE2342A78100D268B9 /* PhotoSearchDetailViewController.swift */; };
+		3AB168F12342AE4F00D268B9 /* FavoritePhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB168F02342AE4F00D268B9 /* FavoritePhotosViewController.swift */; };
+		3AB168F32342AF1800D268B9 /* FavPhotosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB168F22342AF1800D268B9 /* FavPhotosTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		3AB168EA2342948E00D268B9 /* PhotoAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAPIClient.swift; sourceTree = "<group>"; };
 		3AB168EC2342A48D00D268B9 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
 		3AB168EE2342A78100D268B9 /* PhotoSearchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchDetailViewController.swift; sourceTree = "<group>"; };
+		3AB168F02342AE4F00D268B9 /* FavoritePhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePhotosViewController.swift; sourceTree = "<group>"; };
+		3AB168F22342AF1800D268B9 /* FavPhotosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavPhotosTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +173,8 @@
 				3AB168D523428B2C00D268B9 /* PhotoCollectionViewCell.swift */,
 				3AB168D9234291DB00D268B9 /* PhotoViewController.swift */,
 				3AB168EE2342A78100D268B9 /* PhotoSearchDetailViewController.swift */,
+				3AB168F02342AE4F00D268B9 /* FavoritePhotosViewController.swift */,
+				3AB168F22342AF1800D268B9 /* FavPhotosTableViewCell.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -315,6 +321,7 @@
 			files = (
 				3AB168EB2342948E00D268B9 /* PhotoAPIClient.swift in Sources */,
 				3AB168ED2342A48D00D268B9 /* Secrets.swift in Sources */,
+				3AB168F12342AE4F00D268B9 /* FavoritePhotosViewController.swift in Sources */,
 				3AB168D623428B2C00D268B9 /* PhotoCollectionViewCell.swift in Sources */,
 				3AB168DA234291DB00D268B9 /* PhotoViewController.swift in Sources */,
 				3AB168DC2342923300D268B9 /* NetworkManager.swift in Sources */,
@@ -326,6 +333,7 @@
 				3AB168E22342928400D268B9 /* PhotoPersistenceHelper.swift in Sources */,
 				3AB168E42342928B00D268B9 /* PersistenceHelper.swift in Sources */,
 				3AB168E02342924200D268B9 /* AppError.swift in Sources */,
+				3AB168F32342AF1800D268B9 /* FavPhotosTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
