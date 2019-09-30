@@ -43,7 +43,6 @@ class PhotoViewController: UIViewController {
         photoCollectionView.delegate = self
         photoCollectionView.dataSource = self
         searchBar.delegate = self
-        loadSearch(str: "cool")
         super.viewDidLoad()
 
     }
@@ -82,10 +81,10 @@ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath:
 }
 }
 
-//func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//       return CGSize(width: 173, height: 170)
-//   }
-//   
+func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+       return CGSize(width: 135, height: 135)
+   }
+
 
 
 //MARK: - SearchBar Extension

@@ -15,8 +15,8 @@ static let shared = PhotoAPIClient()
 
 
     func getPhotos(str: String, completionHandler: @escaping (Result<Photo,AppError>) -> () ) {
-    
-    guard let url = URL(string: "https://pixabay.com/api/?key=13796584-2f2235b8d92a3da4a6b039cc9&q=" ) else {
+        let key = Secrets.key
+    guard let url = URL(string: "https://pixabay.com/api/?key=\(key)&q=\(str)" ) else {
         completionHandler(.failure(.badURL))
         return
     }
