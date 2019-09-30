@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item 2-->
+        <!--Favorite Photos View Controller-->
         <scene sceneID="CCh-E6-FW1">
             <objects>
                 <viewController id="PGi-LC-XkF" customClass="FavoritePhotosViewController" customModule="persistanceLab" customModuleProvider="target" sceneMemberID="viewController">
@@ -44,7 +44,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="hdo-wX-U7x"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item 2" id="hdj-Ul-zVX"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="hdj-Ul-zVX"/>
                     <connections>
                         <outlet property="favTableView" destination="kgi-Mo-5K1" id="Xqb-ul-1fD"/>
                     </connections>
@@ -94,7 +94,7 @@
                                         <size key="customSize" width="135" height="135"/>
                                         <connections>
                                             <outlet property="cellPhoto" destination="3w9-6K-4Xz" id="IPD-2x-ely"/>
-                                            <segue destination="C89-sG-aMF" kind="presentation" identifier="segue" id="uW9-72-lUl"/>
+                                            <segue destination="C89-sG-aMF" kind="show" identifier="segue" id="kMR-Lu-8UW"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -118,7 +118,7 @@
             <objects>
                 <viewController storyboardIdentifier="PhotoSearch" id="C89-sG-aMF" userLabel="PhotoDetailViewController" customClass="PhotoSearchDetailViewController" customModule="persistanceLab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q5S-Vz-cgG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KTw-hj-A71">
@@ -137,6 +137,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="Fy0-2z-Ibe"/>
                     </view>
+                    <navigationItem key="navigationItem" id="GJN-gt-RhI"/>
                     <connections>
                         <outlet property="addToFavorites" destination="KTw-hj-A71" id="g53-J9-bio"/>
                         <outlet property="largeImage" destination="dqA-bt-3JM" id="c8j-SK-swV"/>
@@ -164,11 +165,11 @@
             </objects>
             <point key="canvasLocation" x="-590" y="-73"/>
         </scene>
-        <!--Item 1-->
+        <!--Search-->
         <scene sceneID="wRT-GT-uhE">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UaH-Tb-8YU" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="AGs-gr-nxG"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="UaH-Tb-8YU" userLabel="Search" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="search" id="AGs-gr-nxG" userLabel="Search"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AoP-cU-uj6">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
