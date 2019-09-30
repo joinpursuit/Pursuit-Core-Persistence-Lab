@@ -24,6 +24,7 @@
 		3AB168E6234292CF00D268B9 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB168E5234292CF00D268B9 /* Photo.swift */; };
 		3AB168EB2342948E00D268B9 /* PhotoAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB168EA2342948E00D268B9 /* PhotoAPIClient.swift */; };
 		3AB168ED2342A48D00D268B9 /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB168EC2342A48D00D268B9 /* Secrets.swift */; };
+		3AB168EF2342A78100D268B9 /* PhotoSearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB168EE2342A78100D268B9 /* PhotoSearchDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		3AB168E5234292CF00D268B9 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		3AB168EA2342948E00D268B9 /* PhotoAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAPIClient.swift; sourceTree = "<group>"; };
 		3AB168EC2342A48D00D268B9 /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
+		3AB168EE2342A78100D268B9 /* PhotoSearchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 			children = (
 				3AB168D523428B2C00D268B9 /* PhotoCollectionViewCell.swift */,
 				3AB168D9234291DB00D268B9 /* PhotoViewController.swift */,
+				3AB168EE2342A78100D268B9 /* PhotoSearchDetailViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				3AB168D623428B2C00D268B9 /* PhotoCollectionViewCell.swift in Sources */,
 				3AB168DA234291DB00D268B9 /* PhotoViewController.swift in Sources */,
 				3AB168DC2342923300D268B9 /* NetworkManager.swift in Sources */,
+				3AB168EF2342A78100D268B9 /* PhotoSearchDetailViewController.swift in Sources */,
 				3AB168DE2342923B00D268B9 /* ImageManager.swift in Sources */,
 				3AB168E6234292CF00D268B9 /* Photo.swift in Sources */,
 				3AB168A62342899F00D268B9 /* AppDelegate.swift in Sources */,

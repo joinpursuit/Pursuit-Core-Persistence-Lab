@@ -10,6 +10,7 @@ import UIKit
 
 class PhotoViewController: UIViewController {
 
+    //MARK: Outlets & Variables
     
     @IBOutlet weak var photoCollectionView: UICollectionView!
     
@@ -22,7 +23,8 @@ class PhotoViewController: UIViewController {
     }
     
     
-    func loadSearch(str: String){
+    //MARK: Private Methods
+    private func loadSearch(str: String){
         PhotoAPIClient.shared.getPhotos(str: str) { (result) in
             DispatchQueue.main.async {
                 switch result {
@@ -30,7 +32,6 @@ class PhotoViewController: UIViewController {
                     print(error)
                 case .success(let results):
                     self.searchResults = results.hits
-                    print(results.hits[0].id)
                 }
             }
         }
@@ -62,7 +63,7 @@ func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
 func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    var hit = searchResults[indexPath.row]
+    let hit = searchResults[indexPath.row]
     guard let cell = photoCollectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as? PhotoCollectionViewCell else {
         return UICollectionViewCell() }
     ImageHelper.shared.fetchImage(urlString: hit.previewURL ) { (result) in
@@ -79,11 +80,20 @@ func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath:
     }
     return cell
 }
-}
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let selectedCell = sender as! PhotoCollectionViewCell
+        let index = (photoCollectionView.indexPath(for: selectedCell)?.row)!
+        if segue.identifier == "segue" {
+            let destination = segue.destination as! PhotoSearchDetailViewController
+            destination.photo = searchResults[index]
+        }
+    }
 
 func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
        return CGSize(width: 135, height: 135)
    }
+}
 
 
 
@@ -92,8 +102,9 @@ func collectionView(_ collectionView: UICollectionView, layout collectionViewLay
 extension PhotoViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         var searchTerm = searchBar.text ?? ""
-        searchTerm = searchTerm.lowercased().replacingOccurrences(of: " ", with: "-")
+        searchTerm = searchTerm.lowercased().replacingOccurrences(of: " ", with: "+")
         loadSearch(str: searchTerm)
         print(searchTerm)
     }
 }
+
