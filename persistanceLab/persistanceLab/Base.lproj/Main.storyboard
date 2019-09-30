@@ -21,21 +21,21 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="355" id="KqW-kb-tCK" customClass="FavPhotosTableViewCell" customModule="persistanceLab" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="favCell" rowHeight="355" id="KqW-kb-tCK" customClass="FavPhotosTableViewCell" customModule="persistanceLab" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="355"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KqW-kb-tCK" id="umz-9A-Hid">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="355"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Dp3-VP-KSh">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="344"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RiF-k6-gTs">
+                                                    <rect key="frame" x="0.0" y="11" width="414" height="333"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="favPhoto" destination="umz-9A-Hid" id="uGm-Mx-BIu"/>
+                                            <outlet property="favPhoto" destination="RiF-k6-gTs" id="7yY-4G-uvi"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -125,6 +125,9 @@
                                 <rect key="frame" x="150" y="679" width="114" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Add To Favorites"/>
+                                <connections>
+                                    <action selector="addFav:" destination="C89-sG-aMF" eventType="touchUpInside" id="RxA-xu-WxL"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dqA-bt-3JM">
                                 <rect key="frame" x="0.0" y="120" width="414" height="402"/>

@@ -27,6 +27,7 @@
 		3AB168EF2342A78100D268B9 /* PhotoSearchDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB168EE2342A78100D268B9 /* PhotoSearchDetailViewController.swift */; };
 		3AB168F12342AE4F00D268B9 /* FavoritePhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB168F02342AE4F00D268B9 /* FavoritePhotosViewController.swift */; };
 		3AB168F32342AF1800D268B9 /* FavPhotosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB168F22342AF1800D268B9 /* FavPhotosTableViewCell.swift */; };
+		3AB168F52342B22D00D268B9 /* FavPhotos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB168F42342B22D00D268B9 /* FavPhotos.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		3AB168EE2342A78100D268B9 /* PhotoSearchDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSearchDetailViewController.swift; sourceTree = "<group>"; };
 		3AB168F02342AE4F00D268B9 /* FavoritePhotosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePhotosViewController.swift; sourceTree = "<group>"; };
 		3AB168F22342AF1800D268B9 /* FavPhotosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavPhotosTableViewCell.swift; sourceTree = "<group>"; };
+		3AB168F42342B22D00D268B9 /* FavPhotos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavPhotos.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -173,6 +175,7 @@
 				3AB168D523428B2C00D268B9 /* PhotoCollectionViewCell.swift */,
 				3AB168D9234291DB00D268B9 /* PhotoViewController.swift */,
 				3AB168EE2342A78100D268B9 /* PhotoSearchDetailViewController.swift */,
+				3AB168F42342B22D00D268B9 /* FavPhotos.swift */,
 				3AB168F02342AE4F00D268B9 /* FavoritePhotosViewController.swift */,
 				3AB168F22342AF1800D268B9 /* FavPhotosTableViewCell.swift */,
 			);
@@ -323,6 +326,7 @@
 				3AB168ED2342A48D00D268B9 /* Secrets.swift in Sources */,
 				3AB168F12342AE4F00D268B9 /* FavoritePhotosViewController.swift in Sources */,
 				3AB168D623428B2C00D268B9 /* PhotoCollectionViewCell.swift in Sources */,
+				3AB168F52342B22D00D268B9 /* FavPhotos.swift in Sources */,
 				3AB168DA234291DB00D268B9 /* PhotoViewController.swift in Sources */,
 				3AB168DC2342923300D268B9 /* NetworkManager.swift in Sources */,
 				3AB168EF2342A78100D268B9 /* PhotoSearchDetailViewController.swift in Sources */,

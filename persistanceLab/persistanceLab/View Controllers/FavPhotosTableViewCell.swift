@@ -10,8 +10,8 @@ import UIKit
 
 class FavPhotosTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var favPhoto: UIView!
-    
+
+    @IBOutlet weak var favPhoto: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

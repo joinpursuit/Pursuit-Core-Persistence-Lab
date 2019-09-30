@@ -17,6 +17,19 @@ class PhotoSearchDetailViewController: UIViewController {
     
     @IBOutlet weak var addToFavorites: UIButton!
     
+    
+    @IBAction func addFav(_ sender: UIButton) {
+        let fav = FavPhotos(largeImageURL: photo?.largeImageURL ?? "")
+        DispatchQueue.global(qos: .utility).async {
+          try? PhotoPersistenceHelper.manager.save(newPhoto: fav)
+            DispatchQueue.main.async {
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
+        
+    }
+    
+    
     private func loadDetails(){
         ImageHelper.shared.fetchImage(urlString: photo!.largeImageURL) { (result) in
             DispatchQueue.main.async {
