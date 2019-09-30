@@ -9,12 +9,20 @@
 /* Begin PBXBuildFile section */
 		3AB168A62342899F00D268B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB168A52342899F00D268B9 /* AppDelegate.swift */; };
 		3AB168A82342899F00D268B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB168A72342899F00D268B9 /* SceneDelegate.swift */; };
-		3AB168AA2342899F00D268B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB168A92342899F00D268B9 /* ViewController.swift */; };
 		3AB168AD2342899F00D268B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB168AB2342899F00D268B9 /* Main.storyboard */; };
 		3AB168AF234289A300D268B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AB168AE234289A300D268B9 /* Assets.xcassets */; };
 		3AB168B2234289A300D268B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AB168B0234289A300D268B9 /* LaunchScreen.storyboard */; };
 		3AB168BD234289A300D268B9 /* persistanceLabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB168BC234289A300D268B9 /* persistanceLabTests.swift */; };
 		3AB168C8234289A300D268B9 /* persistanceLabUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB168C7234289A300D268B9 /* persistanceLabUITests.swift */; };
+		3AB168D623428B2C00D268B9 /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB168D523428B2C00D268B9 /* PhotoCollectionViewCell.swift */; };
+		3AB168DA234291DB00D268B9 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB168D9234291DB00D268B9 /* PhotoViewController.swift */; };
+		3AB168DC2342923300D268B9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB168DB2342923300D268B9 /* NetworkManager.swift */; };
+		3AB168DE2342923B00D268B9 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB168DD2342923B00D268B9 /* ImageManager.swift */; };
+		3AB168E02342924200D268B9 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB168DF2342924200D268B9 /* AppError.swift */; };
+		3AB168E22342928400D268B9 /* PhotoPersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB168E12342928400D268B9 /* PhotoPersistenceHelper.swift */; };
+		3AB168E42342928B00D268B9 /* PersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB168E32342928B00D268B9 /* PersistenceHelper.swift */; };
+		3AB168E6234292CF00D268B9 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB168E5234292CF00D268B9 /* Photo.swift */; };
+		3AB168EB2342948E00D268B9 /* PhotoAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AB168EA2342948E00D268B9 /* PhotoAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +46,6 @@
 		3AB168A22342899F00D268B9 /* persistanceLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = persistanceLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AB168A52342899F00D268B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AB168A72342899F00D268B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		3AB168A92342899F00D268B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3AB168AC2342899F00D268B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3AB168AE234289A300D268B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AB168B1234289A300D268B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +56,15 @@
 		3AB168C3234289A300D268B9 /* persistanceLabUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = persistanceLabUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AB168C7234289A300D268B9 /* persistanceLabUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = persistanceLabUITests.swift; sourceTree = "<group>"; };
 		3AB168C9234289A300D268B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3AB168D523428B2C00D268B9 /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
+		3AB168D9234291DB00D268B9 /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
+		3AB168DB2342923300D268B9 /* NetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		3AB168DD2342923B00D268B9 /* ImageManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		3AB168DF2342924200D268B9 /* AppError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		3AB168E12342928400D268B9 /* PhotoPersistenceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoPersistenceHelper.swift; sourceTree = "<group>"; };
+		3AB168E32342928B00D268B9 /* PersistenceHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
+		3AB168E5234292CF00D268B9 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		3AB168EA2342948E00D268B9 /* PhotoAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +117,11 @@
 			children = (
 				3AB168A52342899F00D268B9 /* AppDelegate.swift */,
 				3AB168A72342899F00D268B9 /* SceneDelegate.swift */,
-				3AB168A92342899F00D268B9 /* ViewController.swift */,
+				3AB168E5234292CF00D268B9 /* Photo.swift */,
+				3AB168EA2342948E00D268B9 /* PhotoAPIClient.swift */,
+				3AB168E72342930000D268B9 /* Network */,
+				3AB168E9234293C200D268B9 /* Persistance */,
+				3AB168E8234293A300D268B9 /* View Controllers */,
 				3AB168AB2342899F00D268B9 /* Main.storyboard */,
 				3AB168AE234289A300D268B9 /* Assets.xcassets */,
 				3AB168B0234289A300D268B9 /* LaunchScreen.storyboard */,
@@ -126,6 +146,34 @@
 				3AB168C9234289A300D268B9 /* Info.plist */,
 			);
 			path = persistanceLabUITests;
+			sourceTree = "<group>";
+		};
+		3AB168E72342930000D268B9 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				3AB168DB2342923300D268B9 /* NetworkManager.swift */,
+				3AB168DD2342923B00D268B9 /* ImageManager.swift */,
+				3AB168DF2342924200D268B9 /* AppError.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		3AB168E8234293A300D268B9 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3AB168D523428B2C00D268B9 /* PhotoCollectionViewCell.swift */,
+				3AB168D9234291DB00D268B9 /* PhotoViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		3AB168E9234293C200D268B9 /* Persistance */ = {
+			isa = PBXGroup;
+			children = (
+				3AB168E32342928B00D268B9 /* PersistenceHelper.swift */,
+				3AB168E12342928400D268B9 /* PhotoPersistenceHelper.swift */,
+			);
+			path = Persistance;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,9 +307,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AB168AA2342899F00D268B9 /* ViewController.swift in Sources */,
+				3AB168EB2342948E00D268B9 /* PhotoAPIClient.swift in Sources */,
+				3AB168D623428B2C00D268B9 /* PhotoCollectionViewCell.swift in Sources */,
+				3AB168DA234291DB00D268B9 /* PhotoViewController.swift in Sources */,
+				3AB168DC2342923300D268B9 /* NetworkManager.swift in Sources */,
+				3AB168DE2342923B00D268B9 /* ImageManager.swift in Sources */,
+				3AB168E6234292CF00D268B9 /* Photo.swift in Sources */,
 				3AB168A62342899F00D268B9 /* AppDelegate.swift in Sources */,
 				3AB168A82342899F00D268B9 /* SceneDelegate.swift in Sources */,
+				3AB168E22342928400D268B9 /* PhotoPersistenceHelper.swift in Sources */,
+				3AB168E42342928B00D268B9 /* PersistenceHelper.swift in Sources */,
+				3AB168E02342924200D268B9 /* AppError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

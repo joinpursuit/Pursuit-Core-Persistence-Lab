@@ -13,6 +13,8 @@ struct Photo: Codable {
     let totalHits: Int
     let hits: [Hit]
     let total: Int
+    
+
 }
 
 // MARK: - Hit
