@@ -9,22 +9,43 @@
 import UIKit
 
 class PhotoDetailViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var photoImage: UIImageView!
+    
+    var photo: Photo!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        getImage()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @IBAction func saveToFavorite(_ sender: UIButton) {
+        let newPhoto = Photo(webformatURL: photo.webformatURL, likes: photo.likes, comments: photo.comments)
+        
+        DispatchQueue.global(qos: .utility).async {
+            try? PhotoPersistenceHelper.manager.save(newPhoto: newPhoto)
+            DispatchQueue.main.async {
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
     }
-    */
-
+    
+    private func getImage() {
+        
+        ImageHelper.shared.getImage(urlStr: photo.webformatURL) { (result) in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let imageFromOnline):
+                    self.photoImage.image = imageFromOnline
+                    
+                case .failure( let error):
+                    print(error)
+                }
+            }
+        }
+        
+    }
+    
 }

@@ -17,8 +17,11 @@ struct PhotoAPIClient {
     // MARK: - Instance Methods
     
 
-    func getPhotosFromOnline(completionHandler: @escaping (Result<[Photo], AppError>) -> ())  {
-        NetworkHelper.manager.performDataTask(withUrl: elementURL, andMethod: .get) { (results) in
+    func getPhotosFromOnline(searchTxt: String, completionHandler: @escaping (Result<[Photo], AppError>) -> ())  {
+        
+        let url = URL(string: "https://pixabay.com/api/?key=13796813-4829a9f0f397e0d08c42a6038&q=\(searchTxt)")!
+        
+        NetworkHelper.manager.performDataTask(withUrl: url, andMethod: .get) { (results) in
             switch results {
             case .failure(let error):
                 completionHandler(.failure(error))
@@ -35,14 +38,6 @@ struct PhotoAPIClient {
         }
     }
     
-    
-    // MARK: - Private Properties and Initializers
-    private var elementURL: URL {
-        guard let url = URL(string: "https://pixabay.com/api/?key=13796813-4829a9f0f397e0d08c42a6038&image_type=photo") else {
-            fatalError("Error: Invalid URL")
-        }
-        return url
-    }
     
     private init() {}
 }

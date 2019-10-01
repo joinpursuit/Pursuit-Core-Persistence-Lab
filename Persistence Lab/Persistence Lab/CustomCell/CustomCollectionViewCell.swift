@@ -10,4 +10,7 @@ import UIKit
 
 class CustomCollectionViewCell: UICollectionViewCell {
     
+    @IBOutlet weak var photoImage: UIImageView!
+    
+    @IBOutlet weak var favoriteImage: UIImageView!
 }
