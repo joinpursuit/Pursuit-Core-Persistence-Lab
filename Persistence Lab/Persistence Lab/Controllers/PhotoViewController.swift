@@ -29,11 +29,18 @@ class PhotoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        photoCollectionView.dataSource = self
+        configureCollectionView()
+        configureSearchbar()
         loadData(searchString: "")
-        photoSearchBar.delegate = self
+    }
+    
+    private func configureCollectionView() {
         photoCollectionView.delegate = self
-
+        photoCollectionView.dataSource = self
+    }
+    
+    private func configureSearchbar() {
+        photoSearchBar.delegate = self
     }
     
     private func loadData(searchString: String) {

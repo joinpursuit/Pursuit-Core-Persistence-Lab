@@ -21,15 +21,19 @@ class FavoritesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        favoriteCollectionView.dataSource = self
-        favoriteCollectionView.delegate = self
+        configureCollectionView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         loadData()
     }
     
-    func loadData() {
+    private func configureCollectionView() {
+        favoriteCollectionView.dataSource = self
+        favoriteCollectionView.delegate = self
+    }
+    
+    private func loadData() {
         do {
             favorites = try PhotoPersistenceHelper.manager.getPhoto()
         } catch {
