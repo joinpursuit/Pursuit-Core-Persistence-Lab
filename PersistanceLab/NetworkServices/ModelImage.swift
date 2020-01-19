@@ -13,16 +13,16 @@ struct Image: Codable {
 }
 
 struct Hit: Codable {
-    let largeImageURL: String
-    let likes: Int
-    let views: Int
-    let comments: Int
-    let pageURL: String
-    let webformatURL: String // smaller image
-    let tags: String
-    let downloads: String
-    let user: String
-    let favorites: Int
-    let userImageURL: String
-    let previewURL: String// very small in=mage
+    let largeImageURL: String?
+    let likes: Int?
+    let views: Int?
+    let comments: Int?
+    let pageURL: String?
+    let webformatURL: String? // smaller image
+    let tags: String?
+    let downloads: Int?
+    let user: String?
+    let favorites: Int?
+    let userImageURL: String?
+    let previewURL: String?// very small in=mage
 }
