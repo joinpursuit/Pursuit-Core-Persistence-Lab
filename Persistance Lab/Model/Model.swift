@@ -7,3 +7,15 @@
 //
 
 import Foundation
+
+struct Pixabay: Codable {
+    let hits: [Things]
+}
+
+struct Things: Codable {
+    let largeImageURL: String
+    let likes: Int
+    let views: Int
+    let pageURL: String
+    let downloads: Int
+}
