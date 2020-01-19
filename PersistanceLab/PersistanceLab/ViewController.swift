@@ -53,6 +53,14 @@ class ViewController: UIViewController {
             }
         })
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailVC = segue.destination as? DetailViewController, let indexPath = collectionView.indexPath(for: sender as! ImageCollectionViewCell) else {
+            fatalError("error")
+        }
+        let image = images[indexPath.row]
+        detailVC.imageInfo = image
+    }
 }
 
 extension ViewController: UICollectionViewDataSource {
