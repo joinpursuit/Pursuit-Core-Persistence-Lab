@@ -57,4 +57,14 @@ class PersistenceHelper {
         }
         return photos
     }
+    
+    static func deletePic(index: Int) throws {
+        photos.remove(at: index)
+        
+        do {
+            try save()
+        } catch {
+            throw DataPersistenceError.deleteFailed(error)
+        }
+    }
 }

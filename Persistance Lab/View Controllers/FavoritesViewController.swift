@@ -48,16 +48,12 @@ class FavoritesViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "second" {
-            guard let detailVC = segue.destination as? DetailViewController, let indexpath = favCV.indexPathsForSelectedItems?.first else {
-                fatalError()
-            }
-            detailVC.photos = favImages[indexpath.row]
-            detailVC.favButton.isEnabled = false
-        } else {
-            showAlert(title: "Error", message: "Couldnt segue")
+        guard let favVC = segue.destination as? FavDetail, let indexpath = favCV.indexPathsForSelectedItems?.first else {
+            fatalError()
         }
+        favVC.fav = favImages[indexpath.row]
     }
+    
 }
 
 extension FavoritesViewController: UICollectionViewDataSource {
