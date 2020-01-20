@@ -143,15 +143,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="285" height="212"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6JF-vZ-L76">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6JF-vZ-L76">
                                                     <rect key="frame" x="0.0" y="0.0" width="285" height="212"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="6JF-vZ-L76" secondAttribute="trailing" id="7fx-Kx-ouQ"/>
-                                                <constraint firstItem="6JF-vZ-L76" firstAttribute="leading" secondItem="1fb-zi-qeh" secondAttribute="leading" id="AZ8-5P-1H8"/>
-                                                <constraint firstAttribute="bottom" secondItem="6JF-vZ-L76" secondAttribute="bottom" id="WxL-F5-z7A"/>
-                                                <constraint firstItem="6JF-vZ-L76" firstAttribute="top" secondItem="1fb-zi-qeh" secondAttribute="top" id="lRi-Ka-wbA"/>
+                                                <constraint firstAttribute="trailing" secondItem="6JF-vZ-L76" secondAttribute="trailing" id="989-P1-byz"/>
+                                                <constraint firstAttribute="bottom" secondItem="6JF-vZ-L76" secondAttribute="bottom" id="AIE-xS-dZ5"/>
+                                                <constraint firstItem="6JF-vZ-L76" firstAttribute="top" secondItem="1fb-zi-qeh" secondAttribute="top" id="EGm-5v-6Vz"/>
+                                                <constraint firstItem="6JF-vZ-L76" firstAttribute="leading" secondItem="1fb-zi-qeh" secondAttribute="leading" id="GYP-V7-TyC"/>
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="285" height="212"/>
@@ -165,10 +165,10 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Bkg-ny-DSS" firstAttribute="bottom" secondItem="ly9-Hn-05k" secondAttribute="bottom" id="AmV-K5-q8v"/>
-                            <constraint firstItem="Bkg-ny-DSS" firstAttribute="trailing" secondItem="ly9-Hn-05k" secondAttribute="trailing" id="I7m-t8-To3"/>
-                            <constraint firstItem="Bkg-ny-DSS" firstAttribute="leading" secondItem="ly9-Hn-05k" secondAttribute="leading" id="J2o-0P-taB"/>
-                            <constraint firstItem="Bkg-ny-DSS" firstAttribute="top" secondItem="ly9-Hn-05k" secondAttribute="top" id="ZVV-Oa-YEe"/>
+                            <constraint firstItem="Bkg-ny-DSS" firstAttribute="leading" secondItem="ly9-Hn-05k" secondAttribute="leading" id="9Ac-Dg-GdM"/>
+                            <constraint firstItem="Bkg-ny-DSS" firstAttribute="bottom" secondItem="ly9-Hn-05k" secondAttribute="bottom" id="OSr-97-Obh"/>
+                            <constraint firstItem="Bkg-ny-DSS" firstAttribute="top" secondItem="ly9-Hn-05k" secondAttribute="top" id="lnu-SN-jEH"/>
+                            <constraint firstItem="Bkg-ny-DSS" firstAttribute="trailing" secondItem="ly9-Hn-05k" secondAttribute="trailing" id="sUy-Dc-9ZR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ly9-Hn-05k"/>
                     </view>

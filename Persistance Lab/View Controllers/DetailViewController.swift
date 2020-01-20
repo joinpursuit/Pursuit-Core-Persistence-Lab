@@ -48,7 +48,12 @@ class DetailViewController: UIViewController {
             return
         }
         
-        
+        do {
+            try PersistenceHelper.savePhotos(item: setFav)
+            showAlert(title: "Success", message: "Save sucess")
+        } catch {
+            showAlert(title: "Error", message: "\(error)")
+        }
     }
     
 
