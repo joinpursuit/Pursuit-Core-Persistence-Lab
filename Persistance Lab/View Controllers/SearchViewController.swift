@@ -30,7 +30,7 @@ class SearchViewController: UIViewController {
         }
     }
     
-    var currentSearch = "trees" {
+    var currentSearch = "" {
         didSet {
             loadData(userSearch: currentSearch)
         }
@@ -53,8 +53,6 @@ class SearchViewController: UIViewController {
         }
         detailVC.photos = searchImages[indexpath.row]
     }
-
-
 }
 
 extension SearchViewController: UICollectionViewDataSource {

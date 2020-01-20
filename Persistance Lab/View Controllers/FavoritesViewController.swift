@@ -35,7 +35,6 @@ class FavoritesViewController: UIViewController {
            
            // runtime API
            // programmable target-action using objective-c runtime api
-           
            refreshControl.addTarget(self, action: #selector(updateUI), for: .valueChanged)
        }
     

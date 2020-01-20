@@ -8,7 +8,6 @@
 
 import UIKit
 import ImageKit
-import DataPersistence
 
 class DetailViewController: UIViewController {
     
