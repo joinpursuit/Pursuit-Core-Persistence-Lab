@@ -12,7 +12,7 @@ struct Pixabay: Codable {
     let hits: [Things]
 }
 
-struct Things: Codable {
+struct Things: Codable, Equatable {
     let largeImageURL: String
     let likes: Int
     let views: Int

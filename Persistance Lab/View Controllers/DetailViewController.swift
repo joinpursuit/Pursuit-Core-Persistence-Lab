@@ -8,6 +8,7 @@
 
 import UIKit
 import ImageKit
+import DataPersistence
 
 class DetailViewController: UIViewController {
     
@@ -42,6 +43,12 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func favPressed(_ sender: Any) {
+        guard let setFav = photos else {
+            showAlert(title: "Error", message: "Couldnt favorite the photo")
+            return
+        }
+        
+        
     }
     
 

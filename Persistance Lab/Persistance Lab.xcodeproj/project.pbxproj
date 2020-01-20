@@ -10,6 +10,9 @@
 		5285D5D123D507B000E992A0 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285D5D023D507B000E992A0 /* PhotoCell.swift */; };
 		5285D5D323D5099500E992A0 /* FavCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285D5D223D5099500E992A0 /* FavCell.swift */; };
 		5285D5D523D50B2800E992A0 /* FavDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285D5D423D50B2800E992A0 /* FavDetailVC.swift */; };
+		5285D5D723D5298F00E992A0 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285D5D623D5298F00E992A0 /* Alert.swift */; };
+		5285D5DA23D533B600E992A0 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285D5D923D533B600E992A0 /* FileManager.swift */; };
+		5285D5DC23D533BE00E992A0 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285D5DB23D533BE00E992A0 /* Helper.swift */; };
 		52DF8A8223D4ED800022EC5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF8A8123D4ED800022EC5A /* AppDelegate.swift */; };
 		52DF8A8423D4ED800022EC5A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF8A8323D4ED800022EC5A /* SceneDelegate.swift */; };
 		52DF8A8623D4ED800022EC5A /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DF8A8523D4ED800022EC5A /* SearchViewController.swift */; };
@@ -27,6 +30,9 @@
 		5285D5D023D507B000E992A0 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		5285D5D223D5099500E992A0 /* FavCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavCell.swift; sourceTree = "<group>"; };
 		5285D5D423D50B2800E992A0 /* FavDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavDetailVC.swift; sourceTree = "<group>"; };
+		5285D5D623D5298F00E992A0 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		5285D5D923D533B600E992A0 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		5285D5DB23D533BE00E992A0 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		52DF8A7E23D4ED800022EC5A /* Persistance Lab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Persistance Lab.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52DF8A8123D4ED800022EC5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52DF8A8323D4ED800022EC5A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,9 +59,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5285D5D823D5339600E992A0 /* Date Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				5285D5D923D533B600E992A0 /* FileManager.swift */,
+				5285D5DB23D533BE00E992A0 /* Helper.swift */,
+			);
+			path = "Date Persistence";
+			sourceTree = "<group>";
+		};
 		52DF8A7523D4ED800022EC5A = {
 			isa = PBXGroup;
 			children = (
+				5285D5D823D5339600E992A0 /* Date Persistence */,
 				52DF8AA023D4EEBE0022EC5A /* Model */,
 				52DF8A9D23D4EEA60022EC5A /* Getting Data */,
 				52DF8A9523D4EE3A0022EC5A /* View Controllers */,
@@ -110,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				52DF8AA123D4EECA0022EC5A /* Model.swift */,
+				5285D5D623D5298F00E992A0 /* Alert.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -194,11 +211,14 @@
 				52DF8AA223D4EECA0022EC5A /* Model.swift in Sources */,
 				5285D5D323D5099500E992A0 /* FavCell.swift in Sources */,
 				52DF8A8623D4ED800022EC5A /* SearchViewController.swift in Sources */,
+				5285D5DA23D533B600E992A0 /* FileManager.swift in Sources */,
 				5285D5D523D50B2800E992A0 /* FavDetailVC.swift in Sources */,
 				52DF8A8223D4ED800022EC5A /* AppDelegate.swift in Sources */,
 				52DF8A8423D4ED800022EC5A /* SceneDelegate.swift in Sources */,
 				5285D5D123D507B000E992A0 /* PhotoCell.swift in Sources */,
 				52DF8A9923D4EE640022EC5A /* FavoritesViewController.swift in Sources */,
+				5285D5D723D5298F00E992A0 /* Alert.swift in Sources */,
+				5285D5DC23D533BE00E992A0 /* Helper.swift in Sources */,
 				52DF8A9723D4EE550022EC5A /* DetailViewController.swift in Sources */,
 				52DF8A9F23D4EEBB0022EC5A /* APIClient.swift in Sources */,
 			);
