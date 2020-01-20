@@ -16,6 +16,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var likes: UILabel!
     @IBOutlet weak var views: UILabel!
     @IBOutlet weak var downloads: UILabel!
+    @IBOutlet weak var favButton: UIBarButtonItem!
     
     var photos: Things!
     

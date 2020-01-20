@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		5285D5D123D507B000E992A0 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285D5D023D507B000E992A0 /* PhotoCell.swift */; };
 		5285D5D323D5099500E992A0 /* FavCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285D5D223D5099500E992A0 /* FavCell.swift */; };
-		5285D5D523D50B2800E992A0 /* FavDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285D5D423D50B2800E992A0 /* FavDetailVC.swift */; };
 		5285D5D723D5298F00E992A0 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285D5D623D5298F00E992A0 /* Alert.swift */; };
 		5285D5DA23D533B600E992A0 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285D5D923D533B600E992A0 /* FileManager.swift */; };
 		5285D5DC23D533BE00E992A0 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5285D5DB23D533BE00E992A0 /* Helper.swift */; };
@@ -29,7 +28,6 @@
 /* Begin PBXFileReference section */
 		5285D5D023D507B000E992A0 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		5285D5D223D5099500E992A0 /* FavCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavCell.swift; sourceTree = "<group>"; };
-		5285D5D423D50B2800E992A0 /* FavDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavDetailVC.swift; sourceTree = "<group>"; };
 		5285D5D623D5298F00E992A0 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		5285D5D923D533B600E992A0 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		5285D5DB23D533BE00E992A0 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
@@ -108,7 +106,6 @@
 				52DF8A9623D4EE550022EC5A /* DetailViewController.swift */,
 				5285D5D023D507B000E992A0 /* PhotoCell.swift */,
 				52DF8A9823D4EE640022EC5A /* FavoritesViewController.swift */,
-				5285D5D423D50B2800E992A0 /* FavDetailVC.swift */,
 				5285D5D223D5099500E992A0 /* FavCell.swift */,
 			);
 			path = "View Controllers";
@@ -212,7 +209,6 @@
 				5285D5D323D5099500E992A0 /* FavCell.swift in Sources */,
 				52DF8A8623D4ED800022EC5A /* SearchViewController.swift in Sources */,
 				5285D5DA23D533B600E992A0 /* FileManager.swift in Sources */,
-				5285D5D523D50B2800E992A0 /* FavDetailVC.swift in Sources */,
 				52DF8A8223D4ED800022EC5A /* AppDelegate.swift in Sources */,
 				52DF8A8423D4ED800022EC5A /* SceneDelegate.swift in Sources */,
 				5285D5D123D507B000E992A0 /* PhotoCell.swift in Sources */,

@@ -157,7 +157,7 @@
                                         <size key="customSize" width="285" height="212"/>
                                         <connections>
                                             <outlet property="favPhoto" destination="6JF-vZ-L76" id="pQY-KH-1Fg"/>
-                                            <segue destination="xmG-Vk-G0i" kind="show" id="p93-tG-4Sp"/>
+                                            <segue destination="QDr-ji-ybI" kind="show" identifier="second" id="UbM-wm-rCr"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -180,22 +180,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y6S-AA-FM9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1863.7681159420292" y="467.41071428571428"/>
-        </scene>
-        <!--Fav DetailVC-->
-        <scene sceneID="LgB-yc-OEO">
-            <objects>
-                <viewController id="xmG-Vk-G0i" customClass="FavDetailVC" customModule="Persistance_Lab" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="O1j-8l-sJH">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="cxh-lW-xXV"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="RuA-eZ-PZi"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vkw-3Y-LDB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2825" y="475"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="faJ-Y4-o14">
@@ -255,6 +239,7 @@
                     <connections>
                         <outlet property="detailImage" destination="bMc-lI-pIs" id="g62-vw-NQz"/>
                         <outlet property="downloads" destination="FF2-Np-97P" id="XCV-FI-3dB"/>
+                        <outlet property="favButton" destination="HgI-8R-qni" id="xkc-o9-HHv"/>
                         <outlet property="likes" destination="vaG-hQ-e7e" id="PYe-2P-hmC"/>
                         <outlet property="views" destination="2CB-Q1-6eS" id="ruY-ga-H0z"/>
                     </connections>
@@ -269,4 +254,7 @@
         <image name="magnifyingglass" catalog="system" width="64" height="56"/>
         <image name="star.fill" catalog="system" width="64" height="58"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="UbM-wm-rCr"/>
+    </inferredMetricsTieBreakers>
 </document>
