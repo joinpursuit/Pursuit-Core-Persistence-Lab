@@ -17,7 +17,8 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         photoSearch.delegate = self
         searchCV.dataSource = self
-        searchCV.delegate = self 
+        searchCV.delegate = self
+        navigationItem.title = currentSearch
         loadData(userSearch: currentSearch)
     }
     
@@ -44,6 +45,13 @@ class SearchViewController: UIViewController {
                 self?.searchImages = data
             }
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailVC = segue.destination as? DetailViewController, let indexpath = searchCV.indexPathsForSelectedItems?.first else {
+            fatalError()
+        }
+        detailVC.photos = searchImages[indexpath.row]
     }
 
 

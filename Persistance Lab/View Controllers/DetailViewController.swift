@@ -16,8 +16,29 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var views: UILabel!
     @IBOutlet weak var downloads: UILabel!
     
+    var photos: Things!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        updateUI()
+    }
+    
+    func updateUI() {
+        detailImage.getImage(with: photos.largeImageURL) { [weak self] (result) in
+            switch result {
+            case .failure(let appError):
+                print("\(appError)")
+            case .success(let image):
+                DispatchQueue.main.async {
+                    self?.detailImage.image = image
+                }
+            }
+        }
+        
+        likes.text = "Likes: \(photos.likes.description)"
+        views.text = "Views: \(photos.views.description)"
+        downloads.text = "Downloads: \(photos.downloads.description)"
+        
     }
     
     @IBAction func favPressed(_ sender: Any) {
