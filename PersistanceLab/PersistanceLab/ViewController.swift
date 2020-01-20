@@ -20,6 +20,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
     
+    
+    
    
     
     private var images = [Hit]() {
@@ -72,7 +74,7 @@ extension ViewController: UICollectionViewDataSource {
             fatalError("could not downcast to imageCell")
         }
         let image = images[indexPath.row]
-        cell.configureCell(for: image)
+        cell.configureCollectionViewCell(for: image)
         return cell
     }
 }

@@ -14,7 +14,7 @@ class ImageCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var image: UIImageView!
     
     
-    public func configureCell(for imageInfo: Hit) {
+    public func configureCollectionViewCell(for imageInfo: Hit) {
         
         image.getImage(with: imageInfo.webformatURL ?? "") { (result) in
             switch result {

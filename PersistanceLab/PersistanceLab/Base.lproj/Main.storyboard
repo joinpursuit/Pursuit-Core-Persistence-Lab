@@ -149,7 +149,11 @@
                         <viewLayoutGuide key="safeArea" id="ibT-rD-lL6"/>
                     </view>
                     <navigationItem key="navigationItem" id="YfK-OI-iCT">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="heart.fill" catalog="system" id="8Mx-EK-oau"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="heart.fill" catalog="system" id="8Mx-EK-oau">
+                            <connections>
+                                <segue destination="CUD-VV-KxE" kind="unwind" unwindAction="addFaveImagesWithSegue:" id="bpW-n2-Bv1"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="favoritesLabel" destination="l3R-yA-Qzl" id="ufQ-rz-8xd"/>
@@ -160,14 +164,15 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mg2-Hd-Jml" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="CUD-VV-KxE" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2834.7826086956525" y="126.5625"/>
         </scene>
-        <!--Item-->
+        <!--Photos-->
         <scene sceneID="kcA-Yg-acX">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fSs-D9-kTh" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Ba3-O6-6DM"/>
+                    <tabBarItem key="tabBarItem" title="Photos" id="Ba3-O6-6DM"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1ey-pD-Pzd">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -182,6 +187,68 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="126.5625"/>
         </scene>
+        <!--Favorites View Controller-->
+        <scene sceneID="FFS-MO-zCf">
+            <objects>
+                <viewController id="5Db-oI-0fK" customClass="FavoritesViewController" customModule="PersistanceLab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="YXs-lj-FUv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2cA-P0-ei8">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="favoritesCell" rowHeight="236" id="F1V-zJ-1iB" customClass="FavoritesCell" customModule="PersistanceLab" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="236"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="F1V-zJ-1iB" id="13C-1Z-gO2">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="236"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D9c-X5-dXf">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="236"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="D9c-X5-dXf" firstAttribute="top" secondItem="13C-1Z-gO2" secondAttribute="top" id="Orn-S2-de4"/>
+                                                <constraint firstAttribute="bottom" secondItem="D9c-X5-dXf" secondAttribute="bottom" id="Syo-t3-fUp"/>
+                                                <constraint firstAttribute="trailing" secondItem="D9c-X5-dXf" secondAttribute="trailing" id="dwN-uk-xLf"/>
+                                                <constraint firstItem="D9c-X5-dXf" firstAttribute="leading" secondItem="13C-1Z-gO2" secondAttribute="leading" id="nrS-WA-27B"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="favoriteImage" destination="D9c-X5-dXf" id="nKE-z0-z55"/>
+                                            <segue destination="ZL1-Mc-Uzj" kind="show" id="7vd-XF-CfS"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="2cA-P0-ei8" firstAttribute="top" secondItem="YXs-lj-FUv" secondAttribute="top" id="Dlp-aD-ctJ"/>
+                            <constraint firstItem="2cA-P0-ei8" firstAttribute="trailing" secondItem="3p3-y8-VLB" secondAttribute="trailing" id="Ejo-rq-Ims"/>
+                            <constraint firstAttribute="bottom" secondItem="2cA-P0-ei8" secondAttribute="bottom" id="lYX-yx-ZAw"/>
+                            <constraint firstItem="2cA-P0-ei8" firstAttribute="leading" secondItem="3p3-y8-VLB" secondAttribute="leading" id="n2H-Ny-kOg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="3p3-y8-VLB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="V6a-dP-0l7">
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="trm-3Z-rZh">
+                            <connections>
+                                <action selector="editButtonPressed:" destination="5Db-oI-0fK" id="fn7-AX-P4V"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="2cA-P0-ei8" id="XN2-V5-6Ua"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jf7-j5-06e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2057.971014492754" y="825.66964285714278"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Jxn-xl-cjP">
             <objects>
@@ -194,14 +261,37 @@
                     </tabBar>
                     <connections>
                         <segue destination="fSs-D9-kTh" kind="relationship" relationship="viewControllers" id="tAT-yi-0Pd"/>
+                        <segue destination="OTT-O6-eC3" kind="relationship" relationship="viewControllers" id="nxk-Vv-n3E"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="skf-Ya-C4L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
         </scene>
+        <!--Favorites-->
+        <scene sceneID="N0I-3f-HDf">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OTT-O6-eC3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favorites" id="dj2-UW-W11"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TNM-Cv-R6g">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5Db-oI-0fK" kind="relationship" relationship="rootViewController" id="IWO-fW-abP"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Dd-NC-BeU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1125" y="827"/>
+        </scene>
     </scenes>
     <resources>
         <image name="heart.fill" catalog="system" width="64" height="54"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="7vd-XF-CfS"/>
+    </inferredMetricsTieBreakers>
 </document>

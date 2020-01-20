@@ -55,4 +55,16 @@ class DetailViewController: UIViewController {
     }
     
 
+    @IBAction func addToFavorites(_ sender: UIBarButtonItem) {
+        
+        sender.isEnabled = false
+        
+//        guard let favImage = imageInfo else {
+//            fatalError("error")
+//        }
+//
+//        let favoritePost = Hit(largeImageURL: favImage.largeImageURL, likes: favImage.likes, views: favImage.views, comments: favImage.comments, pageURL: favImage.pageURL, webformatURL: favImage.webformatURL, tags: favImage.tags, downloads: favImage.downloads, user: favImage.user, favorites: favImage.favorites, userImageURL: favImage.userImageURL, previewURL: favImage.previewURL)
+    }
+    
+    
 }
