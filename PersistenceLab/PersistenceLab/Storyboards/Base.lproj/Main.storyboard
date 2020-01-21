@@ -169,6 +169,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVt-4v-6ul" userLabel="Edit Button">
+                                <rect key="frame" x="184" y="697.5" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="editPicture:" destination="aZJ-tA-Jab" eventType="touchUpInside" id="DFe-qc-EEn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
@@ -180,10 +187,12 @@
                             <constraint firstItem="bAP-oY-eaC" firstAttribute="trailing" secondItem="VvU-DG-3xj" secondAttribute="trailing" constant="20" id="QTJ-Hy-BX2"/>
                             <constraint firstItem="VVB-Ah-qyI" firstAttribute="leading" secondItem="bAP-oY-eaC" secondAttribute="leading" constant="20" id="Uww-Ye-4rr"/>
                             <constraint firstItem="bAP-oY-eaC" firstAttribute="trailing" secondItem="9fY-ir-QGs" secondAttribute="trailing" constant="20" id="Yvl-Wm-XfK"/>
+                            <constraint firstItem="TVt-4v-6ul" firstAttribute="top" secondItem="VvU-DG-3xj" secondAttribute="bottom" constant="20" id="Zkg-Ge-TJD"/>
                             <constraint firstItem="Y3o-nH-tqq" firstAttribute="leading" secondItem="bAP-oY-eaC" secondAttribute="leading" constant="20" id="dKc-MM-oyY"/>
                             <constraint firstItem="bAP-oY-eaC" firstAttribute="trailing" secondItem="Y3o-nH-tqq" secondAttribute="trailing" constant="20" id="qsw-ik-ul3"/>
                             <constraint firstItem="9fY-ir-QGs" firstAttribute="height" secondItem="eH5-9r-4xQ" secondAttribute="height" multiplier="0.5" id="r61-qn-UtR"/>
                             <constraint firstItem="9fY-ir-QGs" firstAttribute="leading" secondItem="bAP-oY-eaC" secondAttribute="leading" constant="20" id="u7M-5e-eaw"/>
+                            <constraint firstItem="TVt-4v-6ul" firstAttribute="centerX" secondItem="eH5-9r-4xQ" secondAttribute="centerX" id="vzX-6h-xRI"/>
                             <constraint firstItem="bAP-oY-eaC" firstAttribute="trailing" secondItem="VVB-Ah-qyI" secondAttribute="trailing" constant="20" id="x87-lc-0I3"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bAP-oY-eaC"/>
@@ -196,15 +205,78 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="editButton" destination="TVt-4v-6ul" id="mmT-xl-G1k"/>
                         <outlet property="favouritesLabel" destination="VvU-DG-3xj" id="YXe-TF-WJm"/>
                         <outlet property="imageView" destination="9fY-ir-QGs" id="2BU-gR-WSp"/>
-                        <outlet property="likesLabel" destination="Y3o-nH-tqq" id="1sb-ea-aTD"/>
                         <outlet property="tagsLabel" destination="VVB-Ah-qyI" id="1ll-Le-hax"/>
+                        <outlet property="userLabel" destination="Y3o-nH-tqq" id="1sb-ea-aTD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vBY-5d-mGW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4066.666666666667" y="531.69642857142856"/>
+        </scene>
+        <!--Edit-->
+        <scene sceneID="8g8-By-iL0">
+            <objects>
+                <viewController storyboardIdentifier="EditViewController" id="FjR-sm-s2O" customClass="EditViewController" customModule="PersistenceLab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zDy-dW-GzE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhD-Ga-24w" userLabel="User Label">
+                                <rect key="frame" x="20" y="108" width="36.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tags" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ec3-gr-6Jf" userLabel="Tags Label">
+                                <rect key="frame" x="20" y="149" width="36.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0FR-F7-D4s" userLabel="User TextField">
+                                <rect key="frame" x="64.5" y="101.5" width="341.5" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q9H-V3-9Jj" userLabel="Tags TextField">
+                                <rect key="frame" x="64.5" y="142.5" width="341.5" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0FR-F7-D4s" firstAttribute="centerY" secondItem="dhD-Ga-24w" secondAttribute="centerY" id="7i0-uG-tsB"/>
+                            <constraint firstItem="dhD-Ga-24w" firstAttribute="leading" secondItem="PRp-5h-oyi" secondAttribute="leading" constant="20" id="8jI-Gp-fdU"/>
+                            <constraint firstItem="Q9H-V3-9Jj" firstAttribute="centerY" secondItem="ec3-gr-6Jf" secondAttribute="centerY" id="CQn-jQ-FUs"/>
+                            <constraint firstItem="Q9H-V3-9Jj" firstAttribute="leading" secondItem="ec3-gr-6Jf" secondAttribute="trailing" constant="8" id="FbN-hN-mkY"/>
+                            <constraint firstItem="ec3-gr-6Jf" firstAttribute="top" secondItem="dhD-Ga-24w" secondAttribute="bottom" constant="20" id="H9c-cS-AfF"/>
+                            <constraint firstItem="ec3-gr-6Jf" firstAttribute="leading" secondItem="PRp-5h-oyi" secondAttribute="leading" constant="20" id="LZs-ds-HjI"/>
+                            <constraint firstItem="PRp-5h-oyi" firstAttribute="trailing" secondItem="Q9H-V3-9Jj" secondAttribute="trailing" constant="8" id="dpf-DO-rrJ"/>
+                            <constraint firstItem="dhD-Ga-24w" firstAttribute="top" secondItem="PRp-5h-oyi" secondAttribute="top" constant="20" id="kQk-3y-GkV"/>
+                            <constraint firstItem="0FR-F7-D4s" firstAttribute="leading" secondItem="dhD-Ga-24w" secondAttribute="trailing" constant="8" id="lVz-Dl-6Qj"/>
+                            <constraint firstItem="PRp-5h-oyi" firstAttribute="trailing" secondItem="0FR-F7-D4s" secondAttribute="trailing" constant="8" id="yrV-eZ-YiX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PRp-5h-oyi"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit" id="zu8-5X-L7Z">
+                        <barButtonItem key="leftBarButtonItem" title="Complete Editing" id="qJq-Rg-gdL">
+                            <connections>
+                                <action selector="editingComplete:" destination="FjR-sm-s2O" id="h2w-6I-JI8"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tagsTextField" destination="Q9H-V3-9Jj" id="CcA-2J-BGh"/>
+                        <outlet property="userTextField" destination="0FR-F7-D4s" id="6sL-VP-C3V"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XoB-jU-SKw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4976.811594202899" y="-344.19642857142856"/>
         </scene>
         <!--Search Images-->
         <scene sceneID="bcS-9j-zsd">
@@ -280,6 +352,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WVu-SO-Rv4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3077" y="532"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qq7-9i-0th">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Uxw-ke-pnF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="TNx-81-0OZ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="FjR-sm-s2O" kind="relationship" relationship="rootViewController" id="pVe-hT-ybB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6zQ-tG-adb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4066.666666666667" y="-344.19642857142856"/>
         </scene>
     </scenes>
     <resources>

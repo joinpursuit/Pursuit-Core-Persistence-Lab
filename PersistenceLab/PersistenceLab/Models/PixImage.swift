@@ -15,6 +15,7 @@ struct Wrapper: Codable{
 struct PixPhoto: Codable, Equatable{
     var largeImageURL: String
     var likes: Int
+    var user: String?
     var favorites: Int
     var tags: String
     var previewURL: String

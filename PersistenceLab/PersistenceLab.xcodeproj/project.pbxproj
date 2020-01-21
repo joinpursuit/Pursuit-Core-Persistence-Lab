@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C40D18EF23D6774100E1D67D /* EditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40D18EE23D6774100E1D67D /* EditViewController.swift */; };
 		C4BB097A23D0C4250067D9CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BB097923D0C4250067D9CF /* AppDelegate.swift */; };
 		C4BB097C23D0C4250067D9CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BB097B23D0C4250067D9CF /* SceneDelegate.swift */; };
 		C4BB097E23D0C4250067D9CF /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BB097D23D0C4250067D9CF /* SearchController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C40D18EE23D6774100E1D67D /* EditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewController.swift; sourceTree = "<group>"; };
 		C4BB097623D0C4250067D9CF /* PersistenceLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PersistenceLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4BB097923D0C4250067D9CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4BB097B23D0C4250067D9CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				C4BB097D23D0C4250067D9CF /* SearchController.swift */,
 				C4BB09B323D0F72A0067D9CF /* FavouritesController.swift */,
 				C4BB09B123D0F6F90067D9CF /* DetailedController.swift */,
+				C40D18EE23D6774100E1D67D /* EditViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				C4BB09A723D0D6990067D9CF /* UIImageView+Extensions.swift in Sources */,
 				C4BB09A023D0CA3E0067D9CF /* NetworkError.swift in Sources */,
 				C4BB09B023D0DB8D0067D9CF /* PersistenceHelper.swift in Sources */,
+				C40D18EF23D6774100E1D67D /* EditViewController.swift in Sources */,
 				C4BB09A223D0CACF0067D9CF /* NetworkHelper.swift in Sources */,
 				C4BB097A23D0C4250067D9CF /* AppDelegate.swift in Sources */,
 				C4BB09AD23D0D9C60067D9CF /* PixPhotoAPIClient.swift in Sources */,

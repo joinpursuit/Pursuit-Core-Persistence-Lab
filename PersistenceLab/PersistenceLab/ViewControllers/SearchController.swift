@@ -72,6 +72,7 @@ extension SearchController: UICollectionViewDelegateFlowLayout{
             fatalError("Could not segue")
         }
         detailedVC.currentPicture = pictures[indexPath.row]
+        detailedVC.currentPictureIndex = indexPath.row
         navigationController?.pushViewController(detailedVC, animated: true)
     }
     

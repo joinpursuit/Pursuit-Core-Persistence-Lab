@@ -63,7 +63,8 @@ extension FavouritesController: UICollectionViewDelegateFlowLayout{
         guard let detailedVC = storyboard?.instantiateViewController(withIdentifier: "DetailedController") as? DetailedController else {
             fatalError("Could not segue")
         }
-        detailedVC.currentPicture = favourites[indexPath.row]
+        detailedVC.currentPictureIndex = indexPath.row
+        detailedVC.seguedFromFavourites = true
         navigationController?.pushViewController(detailedVC, animated: true)
     }
     

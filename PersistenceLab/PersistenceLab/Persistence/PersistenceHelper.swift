@@ -8,6 +8,7 @@
 
 import Foundation
 
+// Refactor the delete to take in an integer corresponding to its place in the array. 
 struct PersistenceHelper<T: Codable & Equatable>{
 
     func getObjects() throws -> [T]{
@@ -17,17 +18,22 @@ struct PersistenceHelper<T: Codable & Equatable>{
         return try PropertyListDecoder().decode([T].self, from: data)
     }
     
-    func saveObjects(_ object: T) throws {
+    func addObject(_ object: T) throws {
         var savedData = try getObjects()
         savedData.append(object)
-        let serializedData = try PropertyListEncoder().encode(savedData)
+        try saveObjects(savedData)
+    }
+    
+    func removeObject(_ index: Int) throws {
+        var savedData = try getObjects()
+        savedData.remove(at: index)
+        try saveObjects(savedData)
+    }
+    
+    func saveObjects(_ objArr: [T]) throws {
+        let serializedData = try PropertyListEncoder().encode(objArr)
         try serializedData.write(to: url, options: Data.WritingOptions.atomic)
     }
-    
-    func removeObject(_ object: T) throws {
-        let savedData = try getObjects()
-    }
-    
     
     init(fileName: String){
         self.fileName = fileName
