@@ -8,6 +8,7 @@
 
 import UIKit
 
+// Queries an endpoint for an image.
 extension UIImageView{
     func getImage(_ imageURL: String, completion: @escaping (Result<UIImage, NetworkError>) -> ()) {
         

@@ -10,9 +10,11 @@ import UIKit
 
 class SearchController: UIViewController {
 
+    // MARK: Outlets
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var searchBar: UISearchBar!
     
+    // MARK: Properties
     var pictures = [PixPhoto](){
         didSet{
             DispatchQueue.main.async{
@@ -36,11 +38,13 @@ class SearchController: UIViewController {
         }
     }
     
+    // MARK: Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         setUp()
     }
     
+    // MARK: Helper Methods
     private func setUp(){
         collectionView.dataSource = self
         collectionView.delegate = self
@@ -50,6 +54,7 @@ class SearchController: UIViewController {
     
 }
 
+// MARK: UICollectionViewDataSource Methods
 extension SearchController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -65,6 +70,7 @@ extension SearchController: UICollectionViewDataSource{
     }
 }
 
+// MARK: UICollectionViewDelegateFlowLayout Methods
 extension SearchController: UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -81,6 +87,7 @@ extension SearchController: UICollectionViewDelegateFlowLayout{
     }
 }
 
+// MARK: UISearchBarDelegate Methods
 extension SearchController: UISearchBarDelegate{
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let text = searchBar.text, !text.isEmpty else {

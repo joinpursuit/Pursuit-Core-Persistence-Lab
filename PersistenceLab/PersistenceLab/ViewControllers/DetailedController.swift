@@ -10,17 +10,21 @@ import UIKit
 
 class DetailedController: UIViewController {
     
+    // MARK: Outlets
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var tagsLabel: UILabel!
     @IBOutlet weak var userLabel: UILabel!
     @IBOutlet weak var favouritesLabel: UILabel!
     @IBOutlet weak var editButton: UIButton!
+    @IBOutlet weak var shareButton: UIButton!
     
+    // MARK: Properties
     var currentPicture: PixPhoto?
     var currentPictureIndex: Int?
     var persistenceHandler = PersistenceHelper<PixPhoto>(fileName: "Favourites Pictures")
     var seguedFromFavourites = false
     
+    // MARK: Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -29,13 +33,14 @@ class DetailedController: UIViewController {
         super.viewWillAppear(true)
          setUp()
     }
-    
+    // MARK: Helper Functions
     private func setUp(){
         navigationItem.rightBarButtonItem?.image = UIImage(systemName: "heart")
         navigationItem.rightBarButtonItem?.title = ""
     
         if seguedFromFavourites {
             editButton.setTitle("Edit", for: .normal)
+            shareButton.setTitle("Share", for: .normal)
             do {
                 guard let index = currentPictureIndex else {
                     fatalError("Could not obtain index of current photo")
@@ -51,6 +56,8 @@ class DetailedController: UIViewController {
         } else {
             editButton.isHidden = true
             editButton.isEnabled = false
+            shareButton.isHidden = true
+            shareButton.isEnabled = false
         }
         
         guard let curPic = currentPicture else {
@@ -76,6 +83,9 @@ class DetailedController: UIViewController {
         }
     }
     
+    // MARK: Actions
+    // Saves a picture to favourites if it does not already exist there.
+    // If the picture already exists in favourites, it is removed
     @IBAction func favouritedPicture(_ sender: UIBarButtonItem){
         guard let curPic = currentPicture, let index = currentPictureIndex else {
             showAlert("Save Error", "Could not save photo to device.")
@@ -96,13 +106,19 @@ class DetailedController: UIViewController {
             showAlert("Error", "\(error)")
         }
     }
-    
+    // Allows user to alter User, and tags fields.
     @IBAction func editPicture(_ sender: UIButton){
         guard let editVC = storyboard?.instantiateViewController(identifier: "EditViewController") as? EditViewController else {
             fatalError("Could not successfully segue from detailed View Controller")
         }
         editVC.indexOfCurrentPicture = currentPictureIndex
         navigationController?.pushViewController(editVC, animated: true)
+    }
+    
+    // Share Button (Doesn't work on a simulator the way that it would work on an actual phone?)
+    @IBAction func shareButtonPressed(_ sender: UIButton){
+        let activityController = UIActivityViewController(activityItems: [imageView.image!], applicationActivities: nil)
+        present(activityController, animated: true)
     }
     
 }

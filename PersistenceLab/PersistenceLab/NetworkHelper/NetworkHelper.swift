@@ -15,6 +15,8 @@ class NetworkHelper{
         
     }
     
+    // Queries the internet for some data
+    
     func performDataTask(_ request: URLRequest, completion: @escaping (Result<Data,NetworkError>) -> ()){
         
         let dataTask = session.dataTask(with: request) { (data, response, error) in

@@ -10,8 +10,10 @@ import UIKit
 
 class FavouritesController: UIViewController {
 
+    // MARK: Outlets
     @IBOutlet weak var collectionView: UICollectionView!
     
+    // MARK: Properties
     var favourites = [PixPhoto]() {
         didSet{
             collectionView.reloadData()
@@ -19,6 +21,7 @@ class FavouritesController: UIViewController {
     }
     var persistenceHandler = PersistenceHelper<PixPhoto>(fileName: "Favourites Pictures")
     
+    // MARK: Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -28,6 +31,7 @@ class FavouritesController: UIViewController {
         setUp()
     }
     
+    // MARK: Helper Methods
     private func setUp(){
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -41,6 +45,7 @@ class FavouritesController: UIViewController {
 
 }
 
+// MARK: UICollectionViewDataSource Methods
 extension FavouritesController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -57,6 +62,7 @@ extension FavouritesController: UICollectionViewDataSource{
     }
 }
 
+// MARK: UICollectionViewDelegateFlowLayout Methods
 extension FavouritesController: UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

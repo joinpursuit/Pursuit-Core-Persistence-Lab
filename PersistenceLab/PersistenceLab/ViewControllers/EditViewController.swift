@@ -10,23 +10,30 @@ import UIKit
 
 class EditViewController: UIViewController {
     
+    // MARK: Outlets
     @IBOutlet weak var userTextField: UITextField!
     @IBOutlet weak var tagsTextField: UITextField!
     
+    // MARK: Properties
     var indexOfCurrentPicture: Int?
     var persistenceHandler = PersistenceHelper<PixPhoto>(fileName: "Favourites Pictures")
     var savedPictures = [PixPhoto]()
     
+    // MARK: Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
         setUp()
     }
     
+    // MARK: Helper Methods
     private func setUp(){
         userTextField.delegate = self
         tagsTextField.delegate = self
     }
     
+    // MARK: Actions
+    // Replaces the back button
+    // Changes the fields if there is valid data to overwrite them.
     @IBAction func editingComplete(_ sender: UIBarButtonItem){
         guard let index = indexOfCurrentPicture else {
             fatalError("Could not find index of current picture.")
@@ -54,6 +61,7 @@ class EditViewController: UIViewController {
     }
 }
 
+// MARK: UITextFieldDelegate Methods
 extension EditViewController: UITextFieldDelegate{
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

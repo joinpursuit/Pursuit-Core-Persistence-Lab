@@ -151,52 +151,63 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9fY-ir-QGs">
                                 <rect key="frame" x="20" y="108" width="374" height="448"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVB-Ah-qyI" userLabel="Tags">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVB-Ah-qyI" userLabel="Tags">
                                 <rect key="frame" x="20" y="576" width="374" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3o-nH-tqq" userLabel="Downloads">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3o-nH-tqq" userLabel="Downloads">
                                 <rect key="frame" x="20" y="616.5" width="374" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VvU-DG-3xj" userLabel="Favourites">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VvU-DG-3xj" userLabel="Favourites">
                                 <rect key="frame" x="20" y="657" width="374" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TVt-4v-6ul" userLabel="Edit Button">
-                                <rect key="frame" x="184" y="697.5" width="46" height="30"/>
+                                <rect key="frame" x="20" y="697.5" width="57.5" height="30"/>
                                 <state key="normal" title="Button"/>
                                 <connections>
                                     <action selector="editPicture:" destination="aZJ-tA-Jab" eventType="touchUpInside" id="DFe-qc-EEn"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z7H-UV-9qJ" userLabel="Share Button">
+                                <rect key="frame" x="348" y="697.5" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="shareButtonPressed:" destination="aZJ-tA-Jab" eventType="touchUpInside" id="grF-PR-a4D"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="VvU-DG-3xj" firstAttribute="top" secondItem="Y3o-nH-tqq" secondAttribute="bottom" constant="20" id="4a6-3r-pOW"/>
-                            <constraint firstItem="9fY-ir-QGs" firstAttribute="top" secondItem="bAP-oY-eaC" secondAttribute="top" constant="20" id="CdK-zb-wE6"/>
-                            <constraint firstItem="VvU-DG-3xj" firstAttribute="leading" secondItem="bAP-oY-eaC" secondAttribute="leading" constant="20" id="E1S-tN-mUV"/>
-                            <constraint firstItem="Y3o-nH-tqq" firstAttribute="top" secondItem="VVB-Ah-qyI" secondAttribute="bottom" constant="20" id="IzF-R3-ial"/>
-                            <constraint firstItem="VVB-Ah-qyI" firstAttribute="top" secondItem="9fY-ir-QGs" secondAttribute="bottom" constant="20" id="Mms-pb-jN0"/>
-                            <constraint firstItem="bAP-oY-eaC" firstAttribute="trailing" secondItem="VvU-DG-3xj" secondAttribute="trailing" constant="20" id="QTJ-Hy-BX2"/>
-                            <constraint firstItem="VVB-Ah-qyI" firstAttribute="leading" secondItem="bAP-oY-eaC" secondAttribute="leading" constant="20" id="Uww-Ye-4rr"/>
-                            <constraint firstItem="bAP-oY-eaC" firstAttribute="trailing" secondItem="9fY-ir-QGs" secondAttribute="trailing" constant="20" id="Yvl-Wm-XfK"/>
-                            <constraint firstItem="TVt-4v-6ul" firstAttribute="top" secondItem="VvU-DG-3xj" secondAttribute="bottom" constant="20" id="Zkg-Ge-TJD"/>
-                            <constraint firstItem="Y3o-nH-tqq" firstAttribute="leading" secondItem="bAP-oY-eaC" secondAttribute="leading" constant="20" id="dKc-MM-oyY"/>
-                            <constraint firstItem="bAP-oY-eaC" firstAttribute="trailing" secondItem="Y3o-nH-tqq" secondAttribute="trailing" constant="20" id="qsw-ik-ul3"/>
-                            <constraint firstItem="9fY-ir-QGs" firstAttribute="height" secondItem="eH5-9r-4xQ" secondAttribute="height" multiplier="0.5" id="r61-qn-UtR"/>
-                            <constraint firstItem="9fY-ir-QGs" firstAttribute="leading" secondItem="bAP-oY-eaC" secondAttribute="leading" constant="20" id="u7M-5e-eaw"/>
-                            <constraint firstItem="TVt-4v-6ul" firstAttribute="centerX" secondItem="eH5-9r-4xQ" secondAttribute="centerX" id="vzX-6h-xRI"/>
-                            <constraint firstItem="bAP-oY-eaC" firstAttribute="trailing" secondItem="VVB-Ah-qyI" secondAttribute="trailing" constant="20" id="x87-lc-0I3"/>
+                            <constraint firstItem="bAP-oY-eaC" firstAttribute="trailing" secondItem="Z7H-UV-9qJ" secondAttribute="trailing" constant="20" id="5sR-3M-XHB"/>
+                            <constraint firstItem="VvU-DG-3xj" firstAttribute="leading" secondItem="bAP-oY-eaC" secondAttribute="leading" constant="20" id="CkT-RM-T5Q"/>
+                            <constraint firstItem="Y3o-nH-tqq" firstAttribute="top" secondItem="VVB-Ah-qyI" secondAttribute="bottom" constant="20" id="DBX-WU-ae0"/>
+                            <constraint firstItem="VvU-DG-3xj" firstAttribute="top" secondItem="Y3o-nH-tqq" secondAttribute="bottom" constant="20" id="DO8-RK-ScP"/>
+                            <constraint firstItem="Z7H-UV-9qJ" firstAttribute="leading" secondItem="TVt-4v-6ul" secondAttribute="trailing" multiplier="4.5" id="Gsj-8i-0N9"/>
+                            <constraint firstItem="bAP-oY-eaC" firstAttribute="trailing" secondItem="9fY-ir-QGs" secondAttribute="trailing" constant="20" id="HQo-5d-rOM"/>
+                            <constraint firstItem="bAP-oY-eaC" firstAttribute="trailing" secondItem="Y3o-nH-tqq" secondAttribute="trailing" constant="20" id="Jib-Oh-OQQ"/>
+                            <constraint firstItem="TVt-4v-6ul" firstAttribute="top" secondItem="VvU-DG-3xj" secondAttribute="bottom" constant="20" id="K19-au-NHe"/>
+                            <constraint firstItem="VVB-Ah-qyI" firstAttribute="leading" secondItem="bAP-oY-eaC" secondAttribute="leading" constant="20" id="Nf5-kQ-cVy"/>
+                            <constraint firstItem="9fY-ir-QGs" firstAttribute="leading" secondItem="bAP-oY-eaC" secondAttribute="leading" constant="20" id="Vy1-h6-a65"/>
+                            <constraint firstItem="9fY-ir-QGs" firstAttribute="top" secondItem="bAP-oY-eaC" secondAttribute="top" constant="20" id="ZIk-F1-eeJ"/>
+                            <constraint firstItem="TVt-4v-6ul" firstAttribute="leading" secondItem="bAP-oY-eaC" secondAttribute="leading" constant="20" id="dw9-l5-dn3"/>
+                            <constraint firstItem="bAP-oY-eaC" firstAttribute="trailing" secondItem="VvU-DG-3xj" secondAttribute="trailing" constant="20" id="gI1-V4-DSH"/>
+                            <constraint firstItem="Y3o-nH-tqq" firstAttribute="leading" secondItem="bAP-oY-eaC" secondAttribute="leading" constant="20" id="oa2-lM-CvU"/>
+                            <constraint firstItem="VVB-Ah-qyI" firstAttribute="top" secondItem="9fY-ir-QGs" secondAttribute="bottom" constant="20" id="seA-nf-KRg"/>
+                            <constraint firstItem="9fY-ir-QGs" firstAttribute="height" secondItem="eH5-9r-4xQ" secondAttribute="height" multiplier="0.5" id="utv-OX-McZ"/>
+                            <constraint firstItem="bAP-oY-eaC" firstAttribute="trailing" secondItem="VVB-Ah-qyI" secondAttribute="trailing" constant="20" id="yoe-UN-WqC"/>
+                            <constraint firstItem="Z7H-UV-9qJ" firstAttribute="centerY" secondItem="TVt-4v-6ul" secondAttribute="centerY" id="ys3-RU-06e"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bAP-oY-eaC"/>
                     </view>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" id="xi1-6I-BhV">
                         <barButtonItem key="rightBarButtonItem" title="Item" id="8B3-aP-klJ">
                             <connections>
@@ -204,10 +215,12 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="editButton" destination="TVt-4v-6ul" id="mmT-xl-G1k"/>
                         <outlet property="favouritesLabel" destination="VvU-DG-3xj" id="YXe-TF-WJm"/>
                         <outlet property="imageView" destination="9fY-ir-QGs" id="2BU-gR-WSp"/>
+                        <outlet property="shareButton" destination="Z7H-UV-9qJ" id="SB0-Mx-m17"/>
                         <outlet property="tagsLabel" destination="VVB-Ah-qyI" id="1ll-Le-hax"/>
                         <outlet property="userLabel" destination="Y3o-nH-tqq" id="1sb-ea-aTD"/>
                     </connections>

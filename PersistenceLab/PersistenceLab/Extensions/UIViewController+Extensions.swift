@@ -8,6 +8,7 @@
 
 import UIKit
 
+// Show presents an Alert.
 extension UIViewController{
     func showAlert(_ title: String, _ message: String, completion: ((UIAlertAction) -> ())? = nil){
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)

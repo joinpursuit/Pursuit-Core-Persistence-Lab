@@ -9,6 +9,7 @@
 import Foundation
 
 struct PixPhotoAPIClient {
+    // Returns an array of PixPhotos
     static func getObject(_ urlString: String, completion: @escaping (Result<[PixPhoto],NetworkError>) -> ()) {
         
         guard let url = URL(string: urlString) else {
@@ -33,6 +34,7 @@ struct PixPhotoAPIClient {
         }
     }
     
+    // Returns a query url using a user input query.
     static func getPixURL(_ query: String) -> String{
         let searchQuery = query.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? "wolves"
         return "https://pixabay.com/api/?key=\(Keys.apiKey)&q=\(searchQuery)"
