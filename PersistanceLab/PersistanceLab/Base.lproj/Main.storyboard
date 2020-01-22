@@ -94,7 +94,7 @@
         <!--Detail View Controller-->
         <scene sceneID="hWm-TR-Vs1">
             <objects>
-                <viewController id="ZL1-Mc-Uzj" customClass="DetailViewController" customModule="PersistanceLab" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailVC" id="ZL1-Mc-Uzj" customClass="DetailViewController" customModule="PersistanceLab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iyf-vn-AJ4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -218,7 +218,6 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="favoriteImage" destination="D9c-X5-dXf" id="nKE-z0-z55"/>
-                                            <segue destination="ZL1-Mc-Uzj" kind="show" id="7vd-XF-CfS"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -290,7 +289,4 @@
     <resources>
         <image name="heart" catalog="system" width="64" height="54"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="7vd-XF-CfS"/>
-    </inferredMetricsTieBreakers>
 </document>

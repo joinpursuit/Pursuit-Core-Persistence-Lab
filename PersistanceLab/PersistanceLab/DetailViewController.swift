@@ -28,15 +28,24 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        updateUI()
+        
        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        updateUI()
     }
     
     func updateUI() {
         guard let image = imageInfo else {
             fatalError("check prepare for segue")
         }
-        userLabel.text = "user: \(image.user ?? "no name available")"
+        if let userName = image.user{
+            userLabel.text = "user: \(userName)"
+        } else {
+            userLabel.text = "user: nothing"
+
+        }
+        
         tagsLabel.text = image.tags
         likesLabel.text = "likes: \(image.likes?.description ?? "")"
         favoritesLabel.text = "favorited by \(image.favorites?.description ?? "0") users"
