@@ -59,6 +59,33 @@ class DetailViewController: UIViewController {
         
         sender.isEnabled = false
         
+      //  let fave = FavoritesViewController()
+//        else {
+//
+//            return
+//        }
+        guard let faveImage = imageInfo else {
+            return
+        }
+                
+                // this persists(saves) imageinfo to documents directory
+                do {
+                    try PersistanceHelper.save(image: faveImage)
+                    
+                } catch {
+                     print("error saving image with error: \(error)")
+                }
+                
+//        fave.faveImages.insert(imageInfo!, at: 0)
+////                fave.faveImages.insert(addedImage, at: 0)
+//                
+//        //        faveImages.append(addedImage)
+//                
+//        let indexPath = IndexPath.self(row: fave.faveImages.count - 1, section: 0)
+//                
+//                
+//        fave.tableView.insertRows(at: [indexPath], with: .automatic)
+        
 //        guard let favImage = imageInfo else {
 //            fatalError("error")
 //        }

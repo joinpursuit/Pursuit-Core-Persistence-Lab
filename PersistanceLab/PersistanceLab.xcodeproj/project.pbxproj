@@ -107,10 +107,10 @@
 		8D71312123D3887C0095C75E /* PersistanceLab */ = {
 			isa = PBXGroup;
 			children = (
-				8D71312223D3887C0095C75E /* AppDelegate.swift */,
 				8D71312423D3887C0095C75E /* SceneDelegate.swift */,
 				8D71312623D3887C0095C75E /* ViewController.swift */,
 				8D77A95E23D511BF0000D7D1 /* DetailViewController.swift */,
+				8D71312223D3887C0095C75E /* AppDelegate.swift */,
 				8D77A96023D51F640000D7D1 /* FavoritesViewController.swift */,
 				8D71312823D3887C0095C75E /* Main.storyboard */,
 				8D71312B23D388800095C75E /* Assets.xcassets */,

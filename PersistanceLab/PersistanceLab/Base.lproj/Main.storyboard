@@ -149,9 +149,9 @@
                         <viewLayoutGuide key="safeArea" id="ibT-rD-lL6"/>
                     </view>
                     <navigationItem key="navigationItem" id="YfK-OI-iCT">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="heart.fill" catalog="system" id="8Mx-EK-oau">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="heart" catalog="system" id="8Mx-EK-oau">
                             <connections>
-                                <segue destination="CUD-VV-KxE" kind="unwind" unwindAction="addFaveImagesWithSegue:" id="bpW-n2-Bv1"/>
+                                <action selector="addToFavorites:" destination="ZL1-Mc-Uzj" id="GDc-8l-UDY"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -164,9 +164,8 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mg2-Hd-Jml" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="CUD-VV-KxE" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2834.7826086956525" y="126.5625"/>
+            <point key="canvasLocation" x="2978" y="425"/>
         </scene>
         <!--Photos-->
         <scene sceneID="kcA-Yg-acX">
@@ -289,7 +288,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="heart.fill" catalog="system" width="64" height="54"/>
+        <image name="heart" catalog="system" width="64" height="54"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="7vd-XF-CfS"/>
