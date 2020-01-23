@@ -17,7 +17,10 @@ class FavoritesViewController: UIViewController {
     
     var favImages = [Things]() {
         didSet {
-            self.favCV.reloadData()
+            DispatchQueue.main.async {
+                self.updateUI()
+                 self.favCV.reloadData()
+            }
         }
     }
     
@@ -26,19 +29,8 @@ class FavoritesViewController: UIViewController {
         favCV.dataSource = self
         favCV.delegate = self
         updateUI()
-        configureRefreshControl()
     }
     
-    func configureRefreshControl() {
-           refreshControl = UIRefreshControl()
-           favCV.refreshControl = refreshControl
-           
-           // runtime API
-           // programmable target-action using objective-c runtime api
-           refreshControl.addTarget(self, action: #selector(updateUI), for: .valueChanged)
-       }
-    
-    @objc
     func updateUI () {
         do {
             favImages = try PersistenceHelper.loadPhotos()
