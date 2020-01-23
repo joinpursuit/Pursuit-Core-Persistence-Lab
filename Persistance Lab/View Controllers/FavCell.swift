@@ -9,9 +9,39 @@
 import UIKit
 import ImageKit
 
+protocol FavCellDelegate: AnyObject {
+    func didLongPress(cell: FavCell)
+}
+
 class FavCell: UICollectionViewCell {
     
     @IBOutlet weak var favPhoto: UIImageView!
+    
+    weak var delegate: FavCellDelegate?
+    
+    private lazy var longPressedGesture: UILongPressGestureRecognizer = {
+        let gesture = UILongPressGestureRecognizer()
+        gesture.addTarget(self, action: #selector(longPressedAction(gesture:)))
+        return gesture
+    }()
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        addGestureRecognizer(longPressedGesture)
+    }
+    
+    @objc
+    private func longPressedAction(gesture: UILongPressGestureRecognizer) {
+        if gesture.state == .began {
+            gesture.state = .cancelled
+            return
+        }
+        
+        // step 3: creating custom delegate to notify any updates when user long presses
+        delegate?.didLongPress(cell: self)  // imagesViewController.didLongPress
+        
+    }
+    
     
     func configreCell(fav: Things) {
         favPhoto.getImage(with: fav.largeImageURL) { [weak self ](result) in

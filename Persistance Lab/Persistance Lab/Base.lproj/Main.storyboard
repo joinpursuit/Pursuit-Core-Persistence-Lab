@@ -83,7 +83,6 @@
         <!--Navigation Controller-->
         <scene sceneID="vP8-D3-KyE">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hkf-OD-3An" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HAO-6g-iDr" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="isi-xo-Q0a">
@@ -95,6 +94,7 @@
                         <segue destination="X43-j7-pPB" kind="relationship" relationship="rootViewController" id="fl6-yN-a14"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hkf-OD-3An" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="133.92857142857142"/>
         </scene>
@@ -121,7 +121,6 @@
         <!--Favorites-->
         <scene sceneID="SrI-EL-khy">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="y6S-AA-FM9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="ZG9-en-MXE" customClass="FavoritesViewController" customModule="Persistance_Lab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a3O-E1-qfb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -158,7 +157,6 @@
                                         <size key="customSize" width="285" height="212"/>
                                         <connections>
                                             <outlet property="favPhoto" destination="6JF-vZ-L76" id="pQY-KH-1Fg"/>
-                                            <segue destination="OrV-Nu-xtj" kind="show" id="y19-UD-U1T"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -186,74 +184,9 @@
                         <outlet property="favCV" destination="Bkg-ny-DSS" id="itF-95-FgI"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="y6S-AA-FM9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1888" y="500"/>
-        </scene>
-        <!--Fav Detail-->
-        <scene sceneID="2qu-J9-1ts">
-            <objects>
-                <viewController id="OrV-Nu-xtj" customClass="FavDetail" customModule="Persistance_Lab" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="QOq-Sd-4zk">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7QL-LT-IQ9">
-                                <rect key="frame" x="20" y="88" width="374" height="367"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aQx-bm-4Oz">
-                                <rect key="frame" x="20" y="479" width="374" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Downloads" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Eh-LG-aFm">
-                                <rect key="frame" x="20" y="508" width="374" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Views" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2y-5z-hjI" customClass="F">
-                                <rect key="frame" x="20" y="537" width="374" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <constraints>
-                            <constraint firstItem="srg-Fm-DS8" firstAttribute="trailing" secondItem="aQx-bm-4Oz" secondAttribute="trailing" constant="20" id="35J-9u-Ghm"/>
-                            <constraint firstItem="b2y-5z-hjI" firstAttribute="top" secondItem="1Eh-LG-aFm" secondAttribute="bottom" constant="8" id="3MX-hw-paB"/>
-                            <constraint firstItem="aQx-bm-4Oz" firstAttribute="leading" secondItem="srg-Fm-DS8" secondAttribute="leading" constant="20" id="4cj-Gb-8C1"/>
-                            <constraint firstItem="1Eh-LG-aFm" firstAttribute="top" secondItem="aQx-bm-4Oz" secondAttribute="bottom" constant="8" id="9i0-7j-SKl"/>
-                            <constraint firstItem="srg-Fm-DS8" firstAttribute="trailing" secondItem="7QL-LT-IQ9" secondAttribute="trailing" constant="20" id="QFm-fU-TES"/>
-                            <constraint firstItem="7QL-LT-IQ9" firstAttribute="height" secondItem="QOq-Sd-4zk" secondAttribute="height" multiplier="0.409598" id="Y7y-oe-bKq"/>
-                            <constraint firstItem="7QL-LT-IQ9" firstAttribute="leading" secondItem="srg-Fm-DS8" secondAttribute="leading" constant="20" id="ZgY-nL-ohf"/>
-                            <constraint firstItem="srg-Fm-DS8" firstAttribute="trailing" secondItem="b2y-5z-hjI" secondAttribute="trailing" constant="20" id="a6i-YD-VP3"/>
-                            <constraint firstItem="7QL-LT-IQ9" firstAttribute="top" secondItem="srg-Fm-DS8" secondAttribute="top" id="f5K-hv-iV8"/>
-                            <constraint firstItem="1Eh-LG-aFm" firstAttribute="leading" secondItem="srg-Fm-DS8" secondAttribute="leading" constant="20" id="hc9-cy-vdO"/>
-                            <constraint firstItem="aQx-bm-4Oz" firstAttribute="top" secondItem="7QL-LT-IQ9" secondAttribute="bottom" constant="24" id="olI-dY-qPo"/>
-                            <constraint firstItem="srg-Fm-DS8" firstAttribute="trailing" secondItem="1Eh-LG-aFm" secondAttribute="trailing" constant="20" id="vIz-2b-xjH"/>
-                            <constraint firstItem="b2y-5z-hjI" firstAttribute="leading" secondItem="srg-Fm-DS8" secondAttribute="leading" constant="20" id="wqe-jp-UGH"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="srg-Fm-DS8"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="vDj-6k-6ec">
-                        <barButtonItem key="rightBarButtonItem" image="bin.xmark" catalog="system" id="tiG-kh-pws">
-                            <connections>
-                                <action selector="deleteFav:" destination="OrV-Nu-xtj" id="oLG-tT-MVb"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="downloads" destination="1Eh-LG-aFm" id="aAn-Hi-3O5"/>
-                        <outlet property="favPhoto" destination="7QL-LT-IQ9" id="XpK-6D-6WF"/>
-                        <outlet property="likes" destination="aQx-bm-4Oz" id="UcJ-ap-Ed8"/>
-                        <outlet property="views" destination="b2y-5z-hjI" id="piW-5g-8xy"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="arp-zH-fuH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2815.9420289855075" y="499.55357142857139"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="faJ-Y4-o14">
