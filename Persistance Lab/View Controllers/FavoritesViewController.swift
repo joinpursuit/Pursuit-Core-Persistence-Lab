@@ -38,6 +38,16 @@ class FavoritesViewController: UIViewController {
             print("count load favortites: \(error)")
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "second" {
+            guard let detailVC = segue.destination as? DetailViewController, let indexpath = favCV.indexPathsForSelectedItems?.first else {
+                fatalError()
+            }
+            detailVC.photos = favImages[indexpath.row]
+            detailVC.favButton.isEnabled = false
+        }
+    }
 }
 
 extension FavoritesViewController: UICollectionViewDataSource {

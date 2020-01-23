@@ -157,6 +157,7 @@
                                         <size key="customSize" width="285" height="212"/>
                                         <connections>
                                             <outlet property="favPhoto" destination="6JF-vZ-L76" id="pQY-KH-1Fg"/>
+                                            <segue destination="QDr-ji-ybI" kind="show" identifier="second" id="UCg-9M-Cff"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -262,4 +263,7 @@
         <image name="magnifyingglass" catalog="system" width="64" height="56"/>
         <image name="star.fill" catalog="system" width="64" height="58"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="UCg-9M-Cff"/>
+    </inferredMetricsTieBreakers>
 </document>
