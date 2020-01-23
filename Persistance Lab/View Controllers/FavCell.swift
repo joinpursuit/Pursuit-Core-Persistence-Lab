@@ -9,7 +9,7 @@
 import UIKit
 import ImageKit
 
-protocol FavCellDelegate: AnyObject {
+protocol favCellDelegate: AnyObject {
     func didLongPress(cell: FavCell)
 }
 
@@ -17,13 +17,13 @@ class FavCell: UICollectionViewCell {
     
     @IBOutlet weak var favPhoto: UIImageView!
     
-    weak var delegate: FavCellDelegate?
+    weak var delegate: favCellDelegate?
     
     private lazy var longPressedGesture: UILongPressGestureRecognizer = {
         let gesture = UILongPressGestureRecognizer()
         gesture.addTarget(self, action: #selector(longPressedAction(gesture:)))
         return gesture
-    }()
+    } ()
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -41,7 +41,6 @@ class FavCell: UICollectionViewCell {
         delegate?.didLongPress(cell: self)  // imagesViewController.didLongPress
         
     }
-    
     
     func configreCell(fav: Things) {
         favPhoto.getImage(with: fav.largeImageURL) { [weak self ](result) in

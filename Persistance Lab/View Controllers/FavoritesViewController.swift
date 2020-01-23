@@ -38,8 +38,6 @@ class FavoritesViewController: UIViewController {
             print("count load favortites: \(error)")
         }
     }
-    
-    
 }
 
 extension FavoritesViewController: UICollectionViewDataSource {
@@ -57,31 +55,7 @@ extension FavoritesViewController: UICollectionViewDataSource {
     }
 }
 
-extension FavoritesViewController: UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let interspacing = CGFloat(5)
-        let maxwidth = UIScreen.main.bounds.size.width
-        let numOfItems = CGFloat(3)
-        let totalSpacing = CGFloat(numOfItems * interspacing)
-        let itemWidth = CGFloat((maxwidth - totalSpacing) / (numOfItems) )
-        return CGSize(width: itemWidth, height: itemWidth)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 5, left: 3, bottom: 5, right: 3)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 5
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 1
-    }
-}
-
-extension FavoritesViewController: FavCellDelegate {
+extension FavoritesViewController: favCellDelegate {
     func didLongPress(cell: FavCell) {
         guard let indexpath = favCV.indexPath(for: cell) else {
             return
@@ -110,3 +84,29 @@ extension FavoritesViewController: FavCellDelegate {
         }
     }
 }
+
+
+extension FavoritesViewController: UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let interspacing = CGFloat(5)
+        let maxwidth = UIScreen.main.bounds.size.width
+        let numOfItems = CGFloat(3)
+        let totalSpacing = CGFloat(numOfItems * interspacing)
+        let itemWidth = CGFloat((maxwidth - totalSpacing) / (numOfItems) )
+        return CGSize(width: itemWidth, height: itemWidth)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 5, left: 3, bottom: 5, right: 3)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 5
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 1
+    }
+}
+
