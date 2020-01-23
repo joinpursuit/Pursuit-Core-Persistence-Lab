@@ -51,6 +51,7 @@ extension FavoritesViewController: UICollectionViewDataSource {
         }
         let aFav = favImages[indexPath.row]
         cell.configreCell(fav: aFav)
+        cell.delegate = self 
         return cell
     }
 }

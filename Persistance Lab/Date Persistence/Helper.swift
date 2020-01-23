@@ -30,6 +30,11 @@ class PersistenceHelper {
         }
     }
     
+    static func sync(items: [Things]) {
+        self.photos = items
+        try? save()
+    }
+    
     static func savePhotos(item: Things) throws {
         photos.append(item)
         
