@@ -96,6 +96,10 @@ extension SearchViewController: UICollectionViewDelegateFlowLayout {
 }
 
 extension SearchViewController: UISearchBarDelegate {
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+    }
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         currentSearch = searchBar.text!
     }
