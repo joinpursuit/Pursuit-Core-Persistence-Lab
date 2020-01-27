@@ -65,6 +65,7 @@
 		0B4A1D1023D7A435000C7F43 = {
 			isa = PBXGroup;
 			children = (
+				0B4A1D4F23DF50DD000C7F43 /* Secrets */,
 				0B4A1D1B23D7A435000C7F43 /* fileManagerProject */,
 				0B4A1D3223D7A438000C7F43 /* fileManagerProjectTests */,
 				0B4A1D1A23D7A435000C7F43 /* Products */,
@@ -103,6 +104,13 @@
 				0B4A1D3523D7A438000C7F43 /* Info.plist */,
 			);
 			path = fileManagerProjectTests;
+			sourceTree = "<group>";
+		};
+		0B4A1D4F23DF50DD000C7F43 /* Secrets */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Secrets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
