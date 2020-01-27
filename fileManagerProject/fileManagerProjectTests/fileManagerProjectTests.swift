@@ -13,10 +13,20 @@ class fileManagerProjectTests: XCTestCase {
 
     func testJSONFromEndpoint() {
         let endpointURL = "https://pixabay.com/api/?key=\(AppKey.appKey)&q=yellow+flowers"
-        let pix = [Pix]()
+        var pix = [Pix]()
         let exp = XCTestExpectation(description: "Something")
         
+        GenericCoderAPI.manager.getJSON(objectType: PixWrapper.self, with: endpointURL) { result in
+            switch result {
+            case .failure(let error):
+                XCTFail("Failure to decode JSON: \(error)")
+            case .success(let wrapper):
+                pix = wrapper.hits
+                exp.fulfill()
+            }
+        }
         
+        wait(for: [exp], timeout: 5)
     }
 
 }
