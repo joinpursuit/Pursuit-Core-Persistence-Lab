@@ -9,6 +9,8 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    
+    var onePicture: Picture?
 
     override func viewDidLoad() {
         super.viewDidLoad()
