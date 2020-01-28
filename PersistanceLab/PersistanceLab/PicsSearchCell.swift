@@ -12,5 +12,14 @@ class PicsSearchCell: UICollectionViewCell {
     
     @IBOutlet weak var searchedImage: UIImageView!
     
+    var picture: Hit?
+    
+    public func configureCell(for picture: Hit) {
+        
+        let imageURL = picture.largeImageURL
+        
+        searchedImage.getImage(with: imageURL)
+    }
+    
     
 }

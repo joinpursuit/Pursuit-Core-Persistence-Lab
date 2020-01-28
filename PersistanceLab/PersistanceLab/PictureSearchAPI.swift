@@ -10,10 +10,10 @@ import Foundation
 import NetworkHelper
 
 struct PictureSearchAPIClient {
-    static func fetchPicture(for searchQuery: String, completion: @escaping(Result<[Picture], AppError>) -> ()) {
+    static func fetchPicture(for searchQuery: String, completion: @escaping(Result<[Hit], AppError>) -> ()) {
         let searchQuery = searchQuery.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? "uk"
         
-        let pictureEndpointURL = "https://restcountries.eu/rest/v2/name/\(searchQuery)"
+        let pictureEndpointURL = "https://pixabay.com/api/?key=\(SecretKey.apikey)&q=\(searchQuery)&image_type=photo"
         
         guard let url = URL(string: pictureEndpointURL) else {
         completion(.failure(.badURL(pictureEndpointURL)))
@@ -27,7 +27,7 @@ struct PictureSearchAPIClient {
                 completion(.failure(.networkClientError(appError)))
             case .success(let data):
                 do {
-                    let searchResults = try JSONDecoder().decode([Picture].self, from: data)
+                    let searchResults = try JSONDecoder().decode([Hit].self, from: data)
                     
                   // Add how to map through countries
                     //let countries = searchResults.ma
@@ -40,3 +40,36 @@ struct PictureSearchAPIClient {
         }
     }
 }
+
+//
+//struct CreperieAPIClient {
+//    static func fetchCreperie(completion: @escaping (Result<[Business], AppError>) -> ()) {
+//
+//        let businessEndpointURL = "https://api.yelp.com/v3/businesses/search?term=creperie&limit=50&location=quebec"
+//
+//        guard let url = URL(string: businessEndpointURL) else {
+//    completion(.failure(.badURL(businessEndpointURL)))
+//            return
+//        }
+//        var request = URLRequest(url: url)
+//
+//        request.httpMethod = "GET"
+//
+//        request.addValue("Bearer \(SecretKey.apikey)", forHTTPHeaderField: "Authorization")
+//
+//        NetworkHelper.shared.performDataTask(with: request) {(result) in
+//            switch result {
+//            case .failure(let appError):
+//                completion(.failure(.networkClientError(appError)))
+//            case .success(let data):
+//                do {
+//                    let creperie = try JSONDecoder().decode(Creperie.self, from: data)
+//
+//                    completion(.success(creperie.businesses))
+//                } catch {
+//                    completion(.failure(.decodingError(error)))
+//                }
+//            }
+//        }
+//    }
+//}

@@ -14,7 +14,7 @@ class SearchPicsViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    private var pictures = [Picture]() {
+    private var pictures = [Hit]() {
         didSet {
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
@@ -61,6 +61,32 @@ extension SearchPicsViewController: UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "searchPicsCell", for: indexPath) as? PicsSearchCell else {
             fatalError("could not downcast to PicsSearchCell")
         }
-        let picture = pictures
+        let picture = pictures[indexPath.row]
+        cell.configureCell(for: picture)
+        cell.backgroundColor = .blue
+        return cell
+    }
+}
+
+extension SearchPicsViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+            let interItemSpacing: CGFloat = 10 // space between items
+            let maxWidth = UIScreen.main.bounds.size.width // device's width
+            let numberOfItems: CGFloat = 2 // items
+            let totalSpacing: CGFloat = numberOfItems * interItemSpacing
+            let itemWidth: CGFloat = (maxWidth - totalSpacing) / numberOfItems
+            
+            return CGSize(width: itemWidth, height: 300)
+    }
+}
+
+extension SearchPicsViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.resignFirstResponder()
+        guard let searchText = searchBar.text else {
+            print("missing search text")
+            return
+        }
+        searchPicture(searchQuery: searchText)
     }
 }
