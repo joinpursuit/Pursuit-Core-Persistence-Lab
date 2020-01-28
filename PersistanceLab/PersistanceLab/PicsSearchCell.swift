@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ImageKit
 
 class PicsSearchCell: UICollectionViewCell {
     
@@ -18,7 +19,7 @@ class PicsSearchCell: UICollectionViewCell {
         
         let imageURL = picture.largeImageURL
         
-        searchedImage.getImage(with: imageURL)
+        searchedImage.getImage(with: imageURL, completion: <#(Result<UIImage, AppError>) -> ()#>)
     }
     
     
