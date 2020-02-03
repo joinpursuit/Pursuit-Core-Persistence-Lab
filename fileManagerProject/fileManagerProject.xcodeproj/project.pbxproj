@@ -21,6 +21,7 @@
 		0B4A1D5723DF56DC000C7F43 /* GenericCoderAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4A1D5423DF56DC000C7F43 /* GenericCoderAPI.swift */; };
 		0B4A1D5823DF56DC000C7F43 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4A1D5523DF56DC000C7F43 /* AppError.swift */; };
 		0B4A1D5923DF56DC000C7F43 /* NetworkHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4A1D5623DF56DC000C7F43 /* NetworkHelper.swift */; };
+		0B4A1D5B23DF5A4E000C7F43 /* PixTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4A1D5A23DF5A4E000C7F43 /* PixTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		0B4A1D5423DF56DC000C7F43 /* GenericCoderAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericCoderAPI.swift; sourceTree = "<group>"; };
 		0B4A1D5523DF56DC000C7F43 /* AppError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		0B4A1D5623DF56DC000C7F43 /* NetworkHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkHelper.swift; sourceTree = "<group>"; };
+		0B4A1D5A23DF5A4E000C7F43 /* PixTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,10 +99,11 @@
 				0B4A1D1C23D7A435000C7F43 /* AppDelegate.swift */,
 				0B4A1D1E23D7A435000C7F43 /* SceneDelegate.swift */,
 				0B4A1D2023D7A435000C7F43 /* ViewController.swift */,
-				0B4A1D5223DF5548000C7F43 /* Pix.swift */,
-				0B4A1D3E23DF4C47000C7F43 /* DetailViewController.swift */,
 				0B4A1D4023DF4C4F000C7F43 /* FavoritesViewController.swift */,
+				0B4A1D3E23DF4C47000C7F43 /* DetailViewController.swift */,
+				0B4A1D5A23DF5A4E000C7F43 /* PixTableViewCell.swift */,
 				0B4A1D2223D7A435000C7F43 /* Main.storyboard */,
+				0B4A1D5223DF5548000C7F43 /* Pix.swift */,
 				0B4A1D5523DF56DC000C7F43 /* AppError.swift */,
 				0B4A1D5623DF56DC000C7F43 /* NetworkHelper.swift */,
 				0B4A1D5423DF56DC000C7F43 /* GenericCoderAPI.swift */,
@@ -235,6 +238,7 @@
 				0B4A1D5823DF56DC000C7F43 /* AppError.swift in Sources */,
 				0B4A1D5123DF517C000C7F43 /* AppKey.swift in Sources */,
 				0B4A1D1D23D7A435000C7F43 /* AppDelegate.swift in Sources */,
+				0B4A1D5B23DF5A4E000C7F43 /* PixTableViewCell.swift in Sources */,
 				0B4A1D5723DF56DC000C7F43 /* GenericCoderAPI.swift in Sources */,
 				0B4A1D1F23D7A435000C7F43 /* SceneDelegate.swift in Sources */,
 				0B4A1D4123DF4C4F000C7F43 /* FavoritesViewController.swift in Sources */,
