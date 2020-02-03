@@ -24,7 +24,18 @@ class PixTableViewCell: UITableViewCell {
     }
     
     public func configurePixImage(_ pix: Pix) {
-        
+        pixImageView.getImage(with: pix.previewURL) { [weak self] result in
+            switch result {
+            case .failure:
+                DispatchQueue.main.async {
+                    self?.pixImageView.image = UIImage(systemName: "exclamationmark.triangle")
+                }
+            case .success(let image):
+                DispatchQueue.main.async {
+                    self?.pixImageView.image = image
+                }
+            }
+        }
     }
 
 }

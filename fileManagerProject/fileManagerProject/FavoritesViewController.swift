@@ -49,7 +49,7 @@ extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "photo cell", for: indexPath) as? PixTableViewCell else {
-            return UITableViewCell()
+            fatalError("Cell could not be formed as PixTableViewCell")
         }
         cell.configurePixImage(pix[indexPath.row])
         return cell

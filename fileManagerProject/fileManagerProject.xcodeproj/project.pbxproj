@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B1B9B6023E8BB6D00D2AC71 /* ImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1B9B5F23E8BB6D00D2AC71 /* ImageView+Extensions.swift */; };
 		0B4A1D1D23D7A435000C7F43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4A1D1C23D7A435000C7F43 /* AppDelegate.swift */; };
 		0B4A1D1F23D7A435000C7F43 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4A1D1E23D7A435000C7F43 /* SceneDelegate.swift */; };
 		0B4A1D2123D7A435000C7F43 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4A1D2023D7A435000C7F43 /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B1B9B5F23E8BB6D00D2AC71 /* ImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+Extensions.swift"; sourceTree = "<group>"; };
 		0B4A1D1923D7A435000C7F43 /* fileManagerProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fileManagerProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B4A1D1C23D7A435000C7F43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B4A1D1E23D7A435000C7F43 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				0B4A1D5523DF56DC000C7F43 /* AppError.swift */,
 				0B4A1D5623DF56DC000C7F43 /* NetworkHelper.swift */,
 				0B4A1D5423DF56DC000C7F43 /* GenericCoderAPI.swift */,
+				0B1B9B5F23E8BB6D00D2AC71 /* ImageView+Extensions.swift */,
 				0B4A1D2523D7A438000C7F43 /* Assets.xcassets */,
 				0B4A1D2723D7A438000C7F43 /* LaunchScreen.storyboard */,
 				0B4A1D2A23D7A438000C7F43 /* Info.plist */,
@@ -242,6 +245,7 @@
 				0B4A1D5723DF56DC000C7F43 /* GenericCoderAPI.swift in Sources */,
 				0B4A1D1F23D7A435000C7F43 /* SceneDelegate.swift in Sources */,
 				0B4A1D4123DF4C4F000C7F43 /* FavoritesViewController.swift in Sources */,
+				0B1B9B6023E8BB6D00D2AC71 /* ImageView+Extensions.swift in Sources */,
 				0B4A1D3F23DF4C47000C7F43 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
