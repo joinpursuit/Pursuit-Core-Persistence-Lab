@@ -9,6 +9,7 @@
 import Foundation
 
 class GenericCoderAPI {
+    //TODO: Dependency injection, initialize with different encoder
     static let manager = GenericCoderAPI()
     private init() {}
     

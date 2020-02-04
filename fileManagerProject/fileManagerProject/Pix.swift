@@ -12,10 +12,12 @@ struct PixWrapper: Codable {
     let hits: [Pix]
 }
 
-struct Pix: Codable {
+struct Pix: Codable, Equatable {
     // likes, favorites, tags, previewURL, webformatURL
     let likes: Int
     let tags: String
     let previewURL: String
     let webformatURL: String
+    let user: String
 }
+

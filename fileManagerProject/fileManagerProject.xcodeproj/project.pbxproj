@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0B1B9B6023E8BB6D00D2AC71 /* ImageView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1B9B5F23E8BB6D00D2AC71 /* ImageView+Extensions.swift */; };
+		0B1B9B6223E9C1ED00D2AC71 /* PersistenceHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1B9B6123E9C1ED00D2AC71 /* PersistenceHelper.swift */; };
 		0B4A1D1D23D7A435000C7F43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4A1D1C23D7A435000C7F43 /* AppDelegate.swift */; };
 		0B4A1D1F23D7A435000C7F43 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4A1D1E23D7A435000C7F43 /* SceneDelegate.swift */; };
 		0B4A1D2123D7A435000C7F43 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B4A1D2023D7A435000C7F43 /* ViewController.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		0B1B9B5F23E8BB6D00D2AC71 /* ImageView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ImageView+Extensions.swift"; sourceTree = "<group>"; };
+		0B1B9B6123E9C1ED00D2AC71 /* PersistenceHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceHelper.swift; sourceTree = "<group>"; };
 		0B4A1D1923D7A435000C7F43 /* fileManagerProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fileManagerProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B4A1D1C23D7A435000C7F43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B4A1D1E23D7A435000C7F43 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				0B4A1D1C23D7A435000C7F43 /* AppDelegate.swift */,
 				0B4A1D1E23D7A435000C7F43 /* SceneDelegate.swift */,
 				0B4A1D2023D7A435000C7F43 /* ViewController.swift */,
+				0B1B9B6123E9C1ED00D2AC71 /* PersistenceHelper.swift */,
 				0B4A1D4023DF4C4F000C7F43 /* FavoritesViewController.swift */,
 				0B4A1D3E23DF4C47000C7F43 /* DetailViewController.swift */,
 				0B4A1D5A23DF5A4E000C7F43 /* PixTableViewCell.swift */,
@@ -236,6 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B4A1D2123D7A435000C7F43 /* ViewController.swift in Sources */,
+				0B1B9B6223E9C1ED00D2AC71 /* PersistenceHelper.swift in Sources */,
 				0B4A1D5323DF5548000C7F43 /* Pix.swift in Sources */,
 				0B4A1D5923DF56DC000C7F43 /* NetworkHelper.swift in Sources */,
 				0B4A1D5823DF56DC000C7F43 /* AppError.swift in Sources */,

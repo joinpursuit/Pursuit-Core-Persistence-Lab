@@ -20,13 +20,27 @@ class FavoritesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loadData()
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destVC = segue.destination as? DetailViewController {
             destVC.pix = pix[tableView.indexPathForSelectedRow!.row]
+        }
+    }
+    
+    private func loadData() {
+        do {
+            pix = try PixPersistenceHelper.manager.getPix()
+        } catch {
+            let alertVC = UIAlertController(title: "Error", message: "Unable to get favorites: \(error)", preferredStyle: .alert)
+            alertVC.addAction(UIAlertAction(title: "", style: .cancel, handler: nil))
+            present(alertVC, animated: true, completion: nil)
         }
     }
 
@@ -44,7 +58,7 @@ class FavoritesViewController: UIViewController {
 
 extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return pix.count
+        pix.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -54,6 +68,9 @@ extension FavoritesViewController: UITableViewDelegate, UITableViewDataSource {
         cell.configurePixImage(pix[indexPath.row])
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        120
+    }
 }
 
-extension FavoritesViewController: UISearchBarDelegate {}
