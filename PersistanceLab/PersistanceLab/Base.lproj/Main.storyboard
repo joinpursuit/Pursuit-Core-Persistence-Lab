@@ -81,6 +81,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="detailImage" destination="A1z-SI-DCJ" id="6Bg-7W-GOX"/>
+                        <outlet property="favoriteBarButton" destination="Iwd-yo-RJn" id="l64-H9-eyh"/>
                         <outlet property="favoriteLabel" destination="stX-lQ-Mp2" id="dti-Kg-lgR"/>
                         <outlet property="likesLabel" destination="XRi-Lw-3bG" id="lOm-PZ-urS"/>
                         <outlet property="previewURLLabel" destination="vAI-wp-rYA" id="mnC-IS-T3c"/>
@@ -104,14 +105,14 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="favoriteCell" rowHeight="251" id="tD6-pr-dhM">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="FavoritePictureCell" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="favoritePictureCell" rowHeight="251" id="tD6-pr-dhM" customClass="FavoritePictureCell" customModule="PersistanceLab" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="251"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tD6-pr-dhM" id="Inc-6Q-KIl">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="251"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nTC-BB-0yl">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo.on.rectangle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="nTC-BB-0yl">
                                                     <rect key="frame" x="0.0" y="8" width="414" height="235"/>
                                                 </imageView>
                                             </subviews>
@@ -123,6 +124,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="favoritePictureImage" destination="nTC-BB-0yl" id="w63-N3-omL"/>
                                             <segue destination="sbG-no-wYC" kind="show" id="IJ6-e9-Z26"/>
                                         </connections>
                                     </tableViewCell>
@@ -274,8 +276,9 @@
         <image name="heart" catalog="system" width="64" height="54"/>
         <image name="photo" catalog="system" width="64" height="46"/>
         <image name="photo.fill" catalog="system" width="64" height="46"/>
+        <image name="photo.on.rectangle" catalog="system" width="64" height="48"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VFf-Dm-AKY"/>
+        <segue reference="IJ6-e9-Z26"/>
     </inferredMetricsTieBreakers>
 </document>

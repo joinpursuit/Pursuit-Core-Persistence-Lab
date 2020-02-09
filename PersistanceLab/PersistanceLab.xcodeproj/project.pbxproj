@@ -20,6 +20,7 @@
 		0FD788E023D7968000CC3AF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FD788DE23D7968000CC3AF1 /* Main.storyboard */; };
 		0FD788E223D7968500CC3AF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FD788E123D7968500CC3AF1 /* Assets.xcassets */; };
 		0FD788E523D7968500CC3AF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FD788E323D7968500CC3AF1 /* LaunchScreen.storyboard */; };
+		0FEA351F23F0982100342322 /* FavoritePictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FEA351E23F0982100342322 /* FavoritePictureCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		0FD788E123D7968500CC3AF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0FD788E423D7968500CC3AF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0FD788E623D7968500CC3AF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FEA351E23F0982100342322 /* FavoritePictureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritePictureCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 				0F80853523DBA523003BB7D7 /* SearchPicsViewController.swift */,
 				0F212E3723F08848009409DA /* SearchPictureCell.swift */,
 				0FD788DC23D7968000CC3AF1 /* FavoritePicturesViewController.swift */,
+				0FEA351E23F0982100342322 /* FavoritePictureCell.swift */,
 				0F4E0B3823DA443D0024FBF1 /* DetailViewController.swift */,
 			);
 			path = ControllersAndCell;
@@ -196,6 +199,7 @@
 				0FD788D923D7968000CC3AF1 /* AppDelegate.swift in Sources */,
 				0F4E0B3923DA443D0024FBF1 /* DetailViewController.swift in Sources */,
 				0FD788DB23D7968000CC3AF1 /* SceneDelegate.swift in Sources */,
+				0FEA351F23F0982100342322 /* FavoritePictureCell.swift in Sources */,
 				0F64C13523DFA66300543DDA /* PictureSearchAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
