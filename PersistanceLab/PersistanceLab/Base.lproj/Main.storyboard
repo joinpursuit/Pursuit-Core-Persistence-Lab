@@ -77,7 +77,11 @@
                         <viewLayoutGuide key="safeArea" id="avr-H0-St9"/>
                     </view>
                     <navigationItem key="navigationItem" id="8ng-JR-N6A">
-                        <barButtonItem key="rightBarButtonItem" image="heart" catalog="system" id="Iwd-yo-RJn"/>
+                        <barButtonItem key="rightBarButtonItem" image="heart" catalog="system" id="Iwd-yo-RJn">
+                            <connections>
+                                <action selector="savedPicturePressed:" destination="sbG-no-wYC" id="lfJ-aE-efh"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="detailImage" destination="A1z-SI-DCJ" id="6Bg-7W-GOX"/>

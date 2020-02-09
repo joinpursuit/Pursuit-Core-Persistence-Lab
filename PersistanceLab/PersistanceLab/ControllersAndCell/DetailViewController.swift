@@ -7,8 +7,15 @@
 //
 
 import UIKit
+import DataPersistence
+import ImageKit
+
 
 class DetailViewController: UIViewController {
+    
+    public var dataPersistance: DataPersistence<Hit>!
+    
+    public var picture: Hit?
     
     
     @IBOutlet weak var detailImage: UIImageView!
@@ -48,6 +55,18 @@ class DetailViewController: UIViewController {
                     self?.detailImage.image = picture
                 }
             }
+        }
+    }
+    
+    @IBAction func savedPicturePressed(_ sender: UIBarButtonItem) {
+        
+        print("saved article button pressed")
+        guard let picture = picture else { return }
+        do {
+            //SAVING TO DOCUMENT DIRECTORY
+            try dataPersistance.createItem(picture)
+        } catch {
+            print("error saving article: \(error)")
         }
     }
 }

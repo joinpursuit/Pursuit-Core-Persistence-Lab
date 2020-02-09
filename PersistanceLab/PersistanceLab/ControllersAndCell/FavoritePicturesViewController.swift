@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import DataPersistence
+import ImageKit
 
 class FavoritePicturesViewController: UIViewController {
+    
+    public var dataPersistance: DataPersistence<Hit>!
     
     @IBOutlet weak var tableView: UITableView!
     

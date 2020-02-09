@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import DataPersistence
+
+private var dataPersistance = DataPersistence<Hit>(filename: "savedPictures.plist")
 
 class SearchPicsViewController: UIViewController {
     
@@ -50,6 +53,7 @@ class SearchPicsViewController: UIViewController {
         }
         let somePicture = pictures[indexPath.row]
         detailVC.onePicture = somePicture
+        detailVC.dataPersistance = dataPersistance
     }
 }
 

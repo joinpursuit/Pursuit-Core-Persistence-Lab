@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ImageKit
 
 class FavoritePictureCell: UITableViewCell {
 
