@@ -71,13 +71,16 @@ extension SearchPicsViewController: UICollectionViewDataSource {
 
 extension SearchPicsViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let interItemSpacing: CGFloat = 10 // space between items
-        let maxWidth = UIScreen.main.bounds.size.width // device's width
-        let numberOfItems: CGFloat = 2 // items
-        let totalSpacing: CGFloat = numberOfItems * interItemSpacing
-        let itemWidth: CGFloat = (maxWidth - totalSpacing) / numberOfItems
+        //let interItemSpacing: CGFloat = 10 // space between items
+        //let maxWidth = UIScreen.main.bounds.size.width // device's width
+        let maxSize: CGSize = UIScreen.main.bounds.size
+        let itemWidth: CGFloat = maxSize.width
+        //let numberOfItems: CGFloat = 2 // items
+        //let totalSpacing: CGFloat = numberOfItems * interItemSpacing
+        //let itemWidth: CGFloat = (maxWidth - totalSpacing) / numberOfItems
         
-        return CGSize(width: itemWidth, height: 300)
+        //return CGSize(width: itemWidth, height: 400)
+        return CGSize(width: itemWidth, height: itemWidth)
     }
 }
 
