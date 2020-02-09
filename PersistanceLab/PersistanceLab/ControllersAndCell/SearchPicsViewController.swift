@@ -14,6 +14,7 @@ class SearchPicsViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
+    
     private var pictures = [Hit]() {
         didSet {
             DispatchQueue.main.async {
@@ -44,7 +45,7 @@ class SearchPicsViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let detailVC = segue.destination as? DetailViewController, let indexPath = collectionView.indexPath(for: sender as! PicsSearchCell) else {
+        guard let detailVC = segue.destination as? DetailViewController, let indexPath = collectionView.indexPath(for: sender as! SearchPictureCell) else {
             fatalError("failed to get indexPath and detailVC")
         }
         let somePicture = pictures[indexPath.row]
@@ -58,12 +59,12 @@ extension SearchPicsViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "picsSearchCell", for: indexPath) as? PicsSearchCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "searchPictureCell", for: indexPath) as? SearchPictureCell else {
             fatalError("could not downcast to PicsSearchCell")
         }
         let picture = pictures[indexPath.row]
         cell.configureCell(for: picture)
-        cell.backgroundColor = .blue
+        cell.backgroundColor = .orange
         return cell
     }
 }

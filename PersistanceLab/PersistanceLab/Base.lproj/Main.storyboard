@@ -160,39 +160,38 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="SNw-LZ-Zxo">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PQo-o0-htu">
                                 <rect key="frame" x="0.0" y="144" width="414" height="669"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Vir-hq-apM">
-                                    <size key="itemSize" width="196" height="205"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="t4m-E1-sbn">
+                                    <size key="itemSize" width="262" height="216"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="PicsSearchCell" reuseIdentifier="picsSearchCell" id="pNO-3p-jIq" customClass="PicsSearchCell" customModule="PersistanceLab" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="196" height="205"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="SearchPictureCell" reuseIdentifier="searchPictureCell" id="5lg-df-be9" customClass="SearchPictureCell" customModule="PersistanceLab" customModuleProvider="target">
+                                        <rect key="frame" x="76" y="0.0" width="262" height="216"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="searchPicsCell" insetsLayoutMarginsFromSafeArea="NO" id="I6p-3M-TYQ" customClass="PicsSearchCell" customModule="PersistanceLab" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="196" height="205"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Hf1-KV-7LN">
+                                            <rect key="frame" x="0.0" y="0.0" width="262" height="216"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="g1m-HI-qdu">
-                                                    <rect key="frame" x="0.0" y="1" width="196" height="202.5"/>
-                                                    <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="9ji-1l-w86">
+                                                    <rect key="frame" x="8" y="8" width="246" height="200"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="g1m-HI-qdu" firstAttribute="top" secondItem="I6p-3M-TYQ" secondAttribute="top" id="XiQ-85-pr4"/>
-                                                <constraint firstItem="g1m-HI-qdu" firstAttribute="leading" secondItem="I6p-3M-TYQ" secondAttribute="leading" id="bQC-LW-2Tp"/>
-                                                <constraint firstAttribute="trailing" secondItem="g1m-HI-qdu" secondAttribute="trailing" id="r7b-rj-Bd9"/>
-                                                <constraint firstAttribute="bottom" secondItem="g1m-HI-qdu" secondAttribute="bottom" id="xQW-Ge-Lx9"/>
+                                                <constraint firstAttribute="trailing" secondItem="9ji-1l-w86" secondAttribute="trailing" constant="8" id="HaE-Rk-2aZ"/>
+                                                <constraint firstAttribute="bottom" secondItem="9ji-1l-w86" secondAttribute="bottom" constant="8" id="ZTD-ml-JdV"/>
+                                                <constraint firstItem="9ji-1l-w86" firstAttribute="leading" secondItem="Hf1-KV-7LN" secondAttribute="leading" constant="8" id="pYj-BE-LoE"/>
+                                                <constraint firstItem="9ji-1l-w86" firstAttribute="top" secondItem="Hf1-KV-7LN" secondAttribute="top" constant="8" id="w4n-xh-vRt"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="196" height="205"/>
+                                        <size key="customSize" width="262" height="216"/>
                                         <connections>
-                                            <outlet property="searchedImage" destination="g1m-HI-qdu" id="FdN-0u-m3Z"/>
-                                            <segue destination="sbG-no-wYC" kind="show" id="OXc-9a-f3E"/>
+                                            <outlet property="searchedImage" destination="9ji-1l-w86" id="I4a-FR-sjZ"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -200,11 +199,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="SNw-LZ-Zxo" firstAttribute="leading" secondItem="ReX-zG-Vnb" secondAttribute="leading" id="KUo-sZ-Bjl"/>
-                            <constraint firstItem="SNw-LZ-Zxo" firstAttribute="trailing" secondItem="ReX-zG-Vnb" secondAttribute="trailing" id="M3o-yZ-mn2"/>
-                            <constraint firstItem="SNw-LZ-Zxo" firstAttribute="top" secondItem="Mur-9h-GE3" secondAttribute="bottom" id="S3C-3j-tCM"/>
                             <constraint firstItem="Mur-9h-GE3" firstAttribute="leading" secondItem="ReX-zG-Vnb" secondAttribute="leading" id="Ydy-9C-CGI"/>
-                            <constraint firstItem="SNw-LZ-Zxo" firstAttribute="bottom" secondItem="ReX-zG-Vnb" secondAttribute="bottom" id="dqy-WL-haP"/>
                             <constraint firstItem="Mur-9h-GE3" firstAttribute="trailing" secondItem="ReX-zG-Vnb" secondAttribute="trailing" id="qkZ-VM-Y8J"/>
                             <constraint firstItem="Mur-9h-GE3" firstAttribute="top" secondItem="ReX-zG-Vnb" secondAttribute="top" id="qlR-5S-EyK"/>
                         </constraints>
@@ -212,7 +207,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="mUk-Fu-eZo"/>
                     <connections>
-                        <outlet property="collectionView" destination="SNw-LZ-Zxo" id="KHs-Vq-qvT"/>
+                        <outlet property="collectionView" destination="PQo-o0-htu" id="uoE-7C-TEG"/>
                         <outlet property="searchBar" destination="Mur-9h-GE3" id="vuT-N9-cGe"/>
                     </connections>
                 </viewController>
@@ -225,7 +220,4 @@
         <image name="heart" catalog="system" width="64" height="54"/>
         <image name="photo" catalog="system" width="64" height="46"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="OXc-9a-f3E"/>
-    </inferredMetricsTieBreakers>
 </document>

@@ -1,15 +1,15 @@
 //
-//  PicsSearchCellCollectionViewCell.swift
+//  SearchPictureCell.swift
 //  PersistanceLab
 //
-//  Created by Yuliia Engman on 1/24/20.
+//  Created by Yuliia Engman on 2/9/20.
 //  Copyright © 2020 Yuliia Engman. All rights reserved.
 //
 
 import UIKit
 import ImageKit
 
-class PicsSearchCell: UICollectionViewCell {
+class SearchPictureCell: UICollectionViewCell {
     
     @IBOutlet weak var searchedImage: UIImageView!
     
@@ -65,4 +65,5 @@ class PicsSearchCell: UICollectionViewCell {
 //        }
 //    }
 //}
+
 
