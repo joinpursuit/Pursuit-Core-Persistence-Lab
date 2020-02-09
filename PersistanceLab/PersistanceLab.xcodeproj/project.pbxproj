@@ -58,9 +58,9 @@
 			children = (
 				0F80853523DBA523003BB7D7 /* SearchPicsViewController.swift */,
 				0F212E3723F08848009409DA /* SearchPictureCell.swift */,
+				0F4E0B3823DA443D0024FBF1 /* DetailViewController.swift */,
 				0FD788DC23D7968000CC3AF1 /* FavoritePicturesViewController.swift */,
 				0FEA351E23F0982100342322 /* FavoritePictureCell.swift */,
-				0F4E0B3823DA443D0024FBF1 /* DetailViewController.swift */,
 			);
 			path = ControllersAndCell;
 			sourceTree = "<group>";

@@ -141,6 +141,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Favorite Photos" id="TJe-hN-c1Z"/>
+                    <connections>
+                        <outlet property="tableView" destination="MfS-aQ-XNg" id="Cnb-qY-te2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
