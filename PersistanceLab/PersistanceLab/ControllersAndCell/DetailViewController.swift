@@ -10,13 +10,12 @@ import UIKit
 import DataPersistence
 import ImageKit
 
-
 class DetailViewController: UIViewController {
     
     public var dataPersistance: DataPersistence<Hit>!
     
-    public var picture: Hit?
-    
+    //public var picture: Hit?
+    var onePicture: Hit?
     
     @IBOutlet weak var detailImage: UIImageView!
     @IBOutlet weak var tagsLabel: UILabel!
@@ -26,9 +25,6 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var previewURLLabel: UILabel!
     
     @IBOutlet weak var favoriteBarButton: UIBarButtonItem!
-    
-    
-    var onePicture: Hit?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,10 +57,10 @@ class DetailViewController: UIViewController {
     @IBAction func savedPicturePressed(_ sender: UIBarButtonItem) {
         
         print("saved article button pressed")
-        guard let picture = picture else { return }
+        guard let onepicture = onePicture else { return }
         do {
             //SAVING TO DOCUMENT DIRECTORY
-            try dataPersistance.createItem(picture)
+            try dataPersistance.createItem(onepicture)
         } catch {
             print("error saving article: \(error)")
         }
