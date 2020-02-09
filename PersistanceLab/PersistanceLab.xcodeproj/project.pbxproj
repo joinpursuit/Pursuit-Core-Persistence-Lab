@@ -51,6 +51,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F579DCF23F06EC60094E245 /* ControllersAndCell */ = {
+			isa = PBXGroup;
+			children = (
+				0F80853523DBA523003BB7D7 /* SearchPicsViewController.swift */,
+				0F80853023DBA25F003BB7D7 /* PicsSearchCell.swift */,
+				0FD788DC23D7968000CC3AF1 /* FavoritePicturesViewController.swift */,
+				0F4E0B3823DA443D0024FBF1 /* DetailViewController.swift */,
+			);
+			path = ControllersAndCell;
+			sourceTree = "<group>";
+		};
+		0F579DD023F06EE70094E245 /* APIandModel */ = {
+			isa = PBXGroup;
+			children = (
+				0F64C13423DFA66300543DDA /* PictureSearchAPI.swift */,
+				0F64C13623DFA6BA00543DDA /* PictureModel.swift */,
+			);
+			path = APIandModel;
+			sourceTree = "<group>";
+		};
 		0F64C16123E0E11300543DDA /* Secrets */ = {
 			isa = PBXGroup;
 			children = (
@@ -81,13 +101,9 @@
 			children = (
 				0FD788D823D7968000CC3AF1 /* AppDelegate.swift */,
 				0FD788DA23D7968000CC3AF1 /* SceneDelegate.swift */,
-				0FD788DC23D7968000CC3AF1 /* FavoritePicturesViewController.swift */,
 				0FD788DE23D7968000CC3AF1 /* Main.storyboard */,
-				0F80853523DBA523003BB7D7 /* SearchPicsViewController.swift */,
-				0F64C13423DFA66300543DDA /* PictureSearchAPI.swift */,
-				0F64C13623DFA6BA00543DDA /* PictureModel.swift */,
-				0F4E0B3823DA443D0024FBF1 /* DetailViewController.swift */,
-				0F80853023DBA25F003BB7D7 /* PicsSearchCell.swift */,
+				0F579DCF23F06EC60094E245 /* ControllersAndCell */,
+				0F579DD023F06EE70094E245 /* APIandModel */,
 				0FD788E123D7968500CC3AF1 /* Assets.xcassets */,
 				0FD788E323D7968500CC3AF1 /* LaunchScreen.storyboard */,
 				0FD788E623D7968500CC3AF1 /* Info.plist */,

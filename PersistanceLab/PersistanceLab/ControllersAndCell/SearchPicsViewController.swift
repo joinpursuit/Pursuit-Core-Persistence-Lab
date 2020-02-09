@@ -26,22 +26,22 @@ class SearchPicsViewController: UIViewController {
         super.viewDidLoad()
         collectionView.dataSource = self
         collectionView.delegate = self
-        collectionView.backgroundColor = .blue
+        collectionView.backgroundColor = .systemBackground
         searchBar.delegate = self
         
         searchPicture(searchQuery: "")
     }
     
     private func searchPicture(searchQuery: String) {
-          PictureSearchAPIClient.fetchPicture(for: searchQuery, completion: { [weak self] (result) in
-              switch result {
-              case .failure(let appError):
-                  print("error \(appError)")
-              case .success(let pictures):
-                  self?.pictures = pictures
-              }
-          })
-      }
+        PictureSearchAPIClient.fetchPicture(for: searchQuery, completion: { [weak self] (result) in
+            switch result {
+            case .failure(let appError):
+                print("error \(appError)")
+            case .success(let pictures):
+                self?.pictures = pictures
+            }
+        })
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let detailVC = segue.destination as? DetailViewController, let indexPath = collectionView.indexPath(for: sender as! PicsSearchCell) else {
@@ -58,7 +58,7 @@ extension SearchPicsViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "searchPicsCell", for: indexPath) as? PicsSearchCell else {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "picsSearchCell", for: indexPath) as? PicsSearchCell else {
             fatalError("could not downcast to PicsSearchCell")
         }
         let picture = pictures[indexPath.row]
@@ -70,13 +70,13 @@ extension SearchPicsViewController: UICollectionViewDataSource {
 
 extension SearchPicsViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-            let interItemSpacing: CGFloat = 10 // space between items
-            let maxWidth = UIScreen.main.bounds.size.width // device's width
-            let numberOfItems: CGFloat = 2 // items
-            let totalSpacing: CGFloat = numberOfItems * interItemSpacing
-            let itemWidth: CGFloat = (maxWidth - totalSpacing) / numberOfItems
-            
-            return CGSize(width: itemWidth, height: 300)
+        let interItemSpacing: CGFloat = 10 // space between items
+        let maxWidth = UIScreen.main.bounds.size.width // device's width
+        let numberOfItems: CGFloat = 2 // items
+        let totalSpacing: CGFloat = numberOfItems * interItemSpacing
+        let itemWidth: CGFloat = (maxWidth - totalSpacing) / numberOfItems
+        
+        return CGSize(width: itemWidth, height: 300)
     }
 }
 
