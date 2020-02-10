@@ -44,13 +44,22 @@ class FavoritePicturesViewController: UIViewController {
     
     func fetchSavedPictures() {
         do {
-            savedPictures = try dataPersistance.loadItems().reversed()
+            savedPictures = try dataPersistance.loadItems()
         } catch {
             print("error fetching articles: \(error)")
         }
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let detailVC = segue.destination as? DetailViewController, let indexPath = tableView.indexPath(for: sender as! FavoritePictureCell) else {
+            fatalError("failed to get indexPath and detailVC")
+        }
+        let somePicture = savedPictures[indexPath.row]
+        detailVC.onePicture = somePicture
+        detailVC.dataPersistance = dataPersistance
     }
 }
 
