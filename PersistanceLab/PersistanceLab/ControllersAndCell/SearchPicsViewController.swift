@@ -9,7 +9,7 @@
 import UIKit
 import DataPersistence
 
-private var dataPersistance = DataPersistence<Hit>(filename: "savedPictures.plist")
+private var dataPersistance = DataPersistence<Hit>(filename: "savedPicturesOfChoice.plist")
 
 class SearchPicsViewController: UIViewController {
     
@@ -26,14 +26,20 @@ class SearchPicsViewController: UIViewController {
         }
     }
     
+    var searchQuery = "" {
+        didSet {
+            searchPicture(searchQuery: searchQuery)
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.backgroundColor = .systemBackground
         searchBar.delegate = self
+        navigationItem.title = "Search Any Picture"
         
-        searchPicture(searchQuery: "")
+        searchPicture(searchQuery: "flowers")
     }
     
     private func searchPicture(searchQuery: String) {
@@ -68,23 +74,31 @@ extension SearchPicsViewController: UICollectionViewDataSource {
         }
         let picture = pictures[indexPath.row]
         cell.configureCell(for: picture)
-        cell.backgroundColor = .orange
+        //cell.backgroundColor = .orange
         return cell
     }
 }
 
 extension SearchPicsViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        //let interItemSpacing: CGFloat = 10 // space between items
-        //let maxWidth = UIScreen.main.bounds.size.width // device's width
-        let maxSize: CGSize = UIScreen.main.bounds.size
-        let itemWidth: CGFloat = maxSize.width
-        //let numberOfItems: CGFloat = 2 // items
-        //let totalSpacing: CGFloat = numberOfItems * interItemSpacing
-        //let itemWidth: CGFloat = (maxWidth - totalSpacing) / numberOfItems
         
-        //return CGSize(width: itemWidth, height: 400)
+        let interItemSpacing: CGFloat = 10 // space between items
+        let maxWidth = UIScreen.main.bounds.size.width // device's width
+        //let maxSize: CGSize = UIScreen.main.bounds.size
+        //let itemWidth: CGFloat = maxSize.width * 0.1
+        //let itemHeight: CGFloat = maxWidth
+        let numberOfItems: CGFloat = 2 // items
+        let totalSpacing: CGFloat = numberOfItems * interItemSpacing
+        let itemWidth: CGFloat = (maxWidth - totalSpacing) / numberOfItems
+        
         return CGSize(width: itemWidth, height: itemWidth)
+        //return CGSize(width: maxWidth, height: itemHeight)
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 1, left: 10, bottom: 1, right: 10)
+    }
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 20
     }
 }
 

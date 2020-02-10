@@ -11,7 +11,7 @@ import NetworkHelper
 
 struct PictureSearchAPIClient {
     static func fetchPicture(for searchQuery: String, completion: @escaping(Result<[Hit], AppError>) -> ()) {
-        let searchQuery = searchQuery.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? "uk"
+        let searchQuery = searchQuery.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? ""
         
         let pictureEndpointURL = "https://pixabay.com/api/?key=\(SecretKey.apikey)&q=\(searchQuery)&image_type=photo"
         

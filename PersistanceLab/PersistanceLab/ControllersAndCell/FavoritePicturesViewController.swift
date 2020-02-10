@@ -18,35 +18,40 @@ class FavoritePicturesViewController: UIViewController {
     
     private var savedPictures = [Hit]() {
         didSet {
-            print("there \(savedPictures.count) saved pictures")
+            // print("there \(savedPictures.count) saved pictures")
             DispatchQueue.main.async {
                 self.tableView.reloadData()
+                // self.fetchSavedPictures()
             }
         }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
         navigationItem.title = "Favorited Pictures"
         
-         fetchSavedPictures()
+        //viewWillAppear(_, animated: true)
+        //fetchSavedPictures()
     }
     
-    // Actually never called this func:
-     //override func viewWillAppear(_ animated: Bool) {
-    //        super.viewWillAppear(true)
-    //        fetchSavedPictures()
-    //    }
+    //Actually never called this func:
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        fetchSavedPictures()
+    }
     
-       private func fetchSavedPictures() {
-            do {
-                savedPictures = try dataPersistance.loadItems().reversed()
-            } catch {
-                print("error fetching articles: \(error)")
-            }
+    func fetchSavedPictures() {
+        do {
+            savedPictures = try dataPersistance.loadItems().reversed()
+        } catch {
+            print("error fetching articles: \(error)")
         }
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
 }
 
 extension FavoritePicturesViewController: UITableViewDataSource {
@@ -75,7 +80,7 @@ extension FavoritePicturesViewController: UITableViewDelegate {
 extension FavoritePicturesViewController: DataPersistenceDelegate {
     func didSaveItem<T>(_ persistenceHelper: DataPersistence<T>, item: T) where T : Decodable, T : Encodable, T : Equatable {
         print("item was saved")
-       // fetchSavedPictures() // using it to test
+        // fetchSavedPictures() // using it to test
     }
     func didDeleteItem<T>(_ persistenceHelper: DataPersistence<T>, item: T) where T : Decodable, T : Encodable, T : Equatable {
         print("item was deleted")
