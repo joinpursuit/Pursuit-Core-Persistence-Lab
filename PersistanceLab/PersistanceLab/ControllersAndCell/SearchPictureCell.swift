@@ -17,7 +17,7 @@ class SearchPictureCell: UICollectionViewCell {
     
     public func configureCell(for picture: Hit) {
         
-        let imageURL = picture.largeImageURL
+        let imageURL = picture.webformatURL
         
         searchedImage.getImage(with: imageURL) {[weak self] (result) in
             switch result {
