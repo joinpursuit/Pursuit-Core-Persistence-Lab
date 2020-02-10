@@ -58,10 +58,10 @@ class DetailViewController: UIViewController {
         
         print("saved article button pressed")
         guard let favoritedPicture = onePicture else { return }
-        let favorited = Hit(largeImageURL: favoritedPicture.largeImageURL, likes: favoritedPicture.likes, webformatURL: favoritedPicture.webformatURL, tags: favoritedPicture.tags, favorites: favoritedPicture.favorites, previewURL: favoritedPicture.previewURL)
+        
         do {
             //SAVING TO DOCUMENT DIRECTORY
-            try dataPersistance.createItem(favorited)
+            try dataPersistance.createItem(favoritedPicture)
         } catch {
             print("error saving article: \(error)")
         }
