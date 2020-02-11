@@ -12,7 +12,7 @@ import ImageKit
 
 class FavoritePicturesViewController: UIViewController {
     
-    public var dataPersistance: DataPersistence<Hit>!
+    public var dataPersistence: DataPersistence<Hit>!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -42,7 +42,7 @@ class FavoritePicturesViewController: UIViewController {
     
     func fetchSavedPictures() {
         do {
-            savedPictures = try dataPersistance.loadItems()
+            savedPictures = try dataPersistence.loadItems().reversed()
         } catch {
             print("error fetching articles: \(error)")
         }
@@ -57,7 +57,7 @@ class FavoritePicturesViewController: UIViewController {
         }
         let somePicture = savedPictures[indexPath.row]
         detailVC.onePicture = somePicture
-        detailVC.dataPersistance = dataPersistance
+        detailVC.dataPersistence = dataPersistence
     }
 }
 

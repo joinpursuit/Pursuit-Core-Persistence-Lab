@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0F212E3823F08848009409DA /* SearchPictureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F212E3723F08848009409DA /* SearchPictureCell.swift */; };
 		0F4E0B3923DA443D0024FBF1 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4E0B3823DA443D0024FBF1 /* DetailViewController.swift */; };
+		0F4F25F123F208B80017C545 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F4F25F023F208B80017C545 /* TabBarController.swift */; };
 		0F64C13523DFA66300543DDA /* PictureSearchAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F64C13423DFA66300543DDA /* PictureSearchAPI.swift */; };
 		0F64C13723DFA6BA00543DDA /* PictureModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F64C13623DFA6BA00543DDA /* PictureModel.swift */; };
 		0F64C16323E0E12300543DDA /* Secrets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F64C16223E0E12300543DDA /* Secrets.swift */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		0F212E3723F08848009409DA /* SearchPictureCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPictureCell.swift; sourceTree = "<group>"; };
 		0F4E0B3823DA443D0024FBF1 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		0F4F25F023F208B80017C545 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		0F64C13423DFA66300543DDA /* PictureSearchAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureSearchAPI.swift; sourceTree = "<group>"; };
 		0F64C13623DFA6BA00543DDA /* PictureModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureModel.swift; sourceTree = "<group>"; };
 		0F64C16223E0E12300543DDA /* Secrets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Secrets.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 		0F579DCF23F06EC60094E245 /* ControllersAndCell */ = {
 			isa = PBXGroup;
 			children = (
+				0F4F25F023F208B80017C545 /* TabBarController.swift */,
 				0F80853523DBA523003BB7D7 /* SearchPicsViewController.swift */,
 				0F212E3723F08848009409DA /* SearchPictureCell.swift */,
 				0F4E0B3823DA443D0024FBF1 /* DetailViewController.swift */,
@@ -193,6 +196,7 @@
 			files = (
 				0FD788DD23D7968000CC3AF1 /* FavoritePicturesViewController.swift in Sources */,
 				0F64C16323E0E12300543DDA /* Secrets.swift in Sources */,
+				0F4F25F123F208B80017C545 /* TabBarController.swift in Sources */,
 				0F212E3823F08848009409DA /* SearchPictureCell.swift in Sources */,
 				0F80853623DBA523003BB7D7 /* SearchPicsViewController.swift in Sources */,
 				0F64C13723DFA6BA00543DDA /* PictureModel.swift in Sources */,

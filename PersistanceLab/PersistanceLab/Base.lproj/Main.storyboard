@@ -156,7 +156,7 @@
         <!--Favorite Photos-->
         <scene sceneID="cLz-y1-M4R">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aWC-IV-r9C" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="FavoriteNavController" automaticallyAdjustsScrollViewInsets="NO" id="aWC-IV-r9C" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Favorite Photos" id="XsB-th-9gh"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="F7n-bJ-dQo">
@@ -175,7 +175,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="Xib-ED-k1i">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="dFM-FQ-uc9" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="dFM-FQ-uc9" customClass="TabBarController" customModule="PersistanceLab" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VES-Ie-ouY">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -194,7 +194,7 @@
         <!--Search Photos-->
         <scene sceneID="w18-f0-KtM">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="v8X-Tp-NkV" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="SearchPicsNavController" automaticallyAdjustsScrollViewInsets="NO" id="v8X-Tp-NkV" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Search Photos" id="dlA-Rc-4ei"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Uvr-rG-vgw">
@@ -213,7 +213,7 @@
         <!--Search Pics View Controller-->
         <scene sceneID="foX-me-e96">
             <objects>
-                <viewController id="EmB-JU-XR6" customClass="SearchPicsViewController" customModule="PersistanceLab" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchPicsViewController" id="EmB-JU-XR6" customClass="SearchPicsViewController" customModule="PersistanceLab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uIe-mU-Oma">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

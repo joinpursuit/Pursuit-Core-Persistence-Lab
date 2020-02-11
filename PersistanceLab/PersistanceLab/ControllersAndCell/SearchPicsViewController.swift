@@ -9,9 +9,9 @@
 import UIKit
 import DataPersistence
 
-private var dataPersistance = DataPersistence<Hit>(filename: "savedPicturesOfChoice.plist")
-
 class SearchPicsViewController: UIViewController {
+    
+    public var dataPersistence: DataPersistence<Hit>!
     
     @IBOutlet weak var searchBar: UISearchBar!
     
@@ -59,7 +59,7 @@ class SearchPicsViewController: UIViewController {
         }
         let somePicture = pictures[indexPath.row]
         detailVC.onePicture = somePicture
-        detailVC.dataPersistance = dataPersistance
+        detailVC.dataPersistence = dataPersistence
     }
 }
 

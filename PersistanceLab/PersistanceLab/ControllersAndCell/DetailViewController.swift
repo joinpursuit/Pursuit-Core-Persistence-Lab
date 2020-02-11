@@ -12,7 +12,7 @@ import ImageKit
 
 class DetailViewController: UIViewController {
     
-    public var dataPersistance: DataPersistence<Hit>!
+    public var dataPersistence: DataPersistence<Hit>!
     
     //public var picture: Hit?
     public var onePicture: Hit?
@@ -61,7 +61,7 @@ class DetailViewController: UIViewController {
         
         do {
             //SAVING TO DOCUMENT DIRECTORY
-            try dataPersistance.createItem(favoritedPicture)
+            try dataPersistence.createItem(favoritedPicture)
         } catch {
             print("error saving article: \(error)")
         }
